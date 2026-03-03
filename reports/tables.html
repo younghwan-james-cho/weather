@@ -1,0 +1,291 @@
+
+<html>
+<head>
+<style>
+    body { font-family: "Times New Roman", Times, serif; padding: 40px; background-color: #ffffff; color: #000000; }
+    table { border-collapse: collapse; width: 100%; max-width: 1200px; margin-bottom: 50px; font-size: 14px; border-top: 2px solid black; border-bottom: 2px solid black; }
+    th, td { border: none; padding: 6px 10px; text-align: left; }
+    th { font-weight: bold; border-bottom: 1px solid black; }
+    td { background-color: transparent; }
+    .title { font-size: 16px; font-weight: bold; margin-bottom: 5px; }
+    .subtitle { font-size: 14px; margin-bottom: 15px; font-style: italic; }
+</style>
+</head>
+<body>
+    <div class="title">Table 1: Weekly Portfolios Sorted on MAX</div>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Panel A: Weekly Portfolios sorted on MAX</th>
+      <th>Unnamed: 1</th>
+      <th>Unnamed: 2</th>
+      <th>Unnamed: 3</th>
+      <th>Unnamed: 4</th>
+      <th>Unnamed: 5</th>
+      <th>Unnamed: 6</th>
+      <th>Unnamed: 7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MAX</td>
+      <td>Low</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>High</td>
+      <td>High minus Low\nExcess</td>
+      <td>α_FF4</td>
+    </tr>
+    <tr>
+      <td>Panel A.1: equal-weighted</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>0.33</td>
+      <td>0.43</td>
+      <td>0.38</td>
+      <td>0.24</td>
+      <td>-0.22</td>
+      <td>-0.56</td>
+      <td>-0.09</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(4.16)</td>
+      <td>(4.52)</td>
+      <td>(3.73)</td>
+      <td>(2.25)</td>
+      <td>(-1.97)</td>
+      <td>(-8.08)</td>
+      <td>(-0.13)</td>
+    </tr>
+    <tr>
+      <td>Panel A.2: value-weighted</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>0.28</td>
+      <td>0.28</td>
+      <td>0.20</td>
+      <td>0.08</td>
+      <td>-0.20</td>
+      <td>-0.47</td>
+      <td>-2.25</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(3.22)</td>
+      <td>(3.02)</td>
+      <td>(2.11)</td>
+      <td>(0.79)</td>
+      <td>(-1.73)</td>
+      <td>(-5.57)</td>
+      <td>(-3.83)</td>
+    </tr>
+    <tr>
+      <td>Panel B: Weekly Portfolios sorted on MAX (skip 1 week)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Panel B.1: equal-weighted</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>0.13</td>
+      <td>0.33</td>
+      <td>0.35</td>
+      <td>0.34</td>
+      <td>0.02</td>
+      <td>-0.11</td>
+      <td>0.91</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(1.57)</td>
+      <td>(3.49)</td>
+      <td>(3.47)</td>
+      <td>(3.12)</td>
+      <td>(0.20)</td>
+      <td>(-1.85)</td>
+      <td>(1.64)</td>
+    </tr>
+    <tr>
+      <td>Panel B.2: value-weighted</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>0.14</td>
+      <td>0.20</td>
+      <td>0.25</td>
+      <td>0.14</td>
+      <td>0.02</td>
+      <td>-0.12</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(1.65)</td>
+      <td>(2.21)</td>
+      <td>(2.62)</td>
+      <td>(1.45)</td>
+      <td>(0.16)</td>
+      <td>(-1.38)</td>
+      <td>(0.12)</td>
+    </tr>
+  </tbody>
+</table>
+    
+    <div class="title">Table 13: Fama-MacBeth Regressions</div>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>(1) Base</th>
+      <th>(2) +Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Intercept**</td>
+      <td>0.206</td>
+      <td>0.206</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(2.26)</td>
+      <td>(2.26)</td>
+    </tr>
+    <tr>
+      <td>**MAX x REV**</td>
+      <td>0.010</td>
+      <td>0.014</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(1.34)</td>
+      <td>(1.91)</td>
+    </tr>
+    <tr>
+      <td>**MAX**</td>
+      <td>-0.134</td>
+      <td>-0.081</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(-9.36)</td>
+      <td>(-7.26)</td>
+    </tr>
+    <tr>
+      <td>**REV**</td>
+      <td>-0.242</td>
+      <td>-0.278</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>(-12.14)</td>
+      <td>(-14.71)</td>
+    </tr>
+    <tr>
+      <td>**MOM**</td>
+      <td></td>
+      <td>0.030</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>(2.01)</td>
+    </tr>
+    <tr>
+      <td>**BETA**</td>
+      <td></td>
+      <td>-0.011</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>(-0.43)</td>
+    </tr>
+    <tr>
+      <td>**SIZE**</td>
+      <td></td>
+      <td>-0.109</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>(-4.98)</td>
+    </tr>
+    <tr>
+      <td>**BM**</td>
+      <td></td>
+      <td>0.067</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>(4.77)</td>
+    </tr>
+    <tr>
+      <td>**IVOL**</td>
+      <td></td>
+      <td>-0.184</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>(-8.72)</td>
+    </tr>
+    <tr>
+      <td>**ILLIQ**</td>
+      <td></td>
+      <td>-0.034</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>(-4.95)</td>
+    </tr>
+    <tr>
+      <td>**Adj. R^2**</td>
+      <td>0.02</td>
+      <td>0.05</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
