@@ -1,0 +1,5318 @@
+Journal of Empirical Finance 82 (2025) 101608
+
+Contents lists available at ScienceDirect
+
+Journal of Empirical Finance
+journal homepage: www.elsevier.com/locate/jempfin
+
+Maxing out short-term reversals in weekly stock returnsI
+Chen Chen a , Andrew Cohen a , Qiqi Liang b
+a
+b
+
+,∗, Licheng Sun a
+
+Department of Finance, Strome College of Business, Old Dominion University, Norfolk, VA 23529, USA
+Department of Business, Drew University, Madison, NJ 07940, USA
+
+ARTICLE
+JEL classification:
+G11
+G12
+G14
+Keywords:
+Lottery-like stocks
+Short-term reversals
+The MAX effect
+Investor overreaction
+
+INFO
+
+ABSTRACT
+Subrahmanyam (1991) presents a model in which increased variance in liquidity trades reduces
+price efficiency when market makers are risk-averse. Motivated by this theoretical insight, we
+hypothesize that pent-up demand from lottery-seeking investors amplifies their overreactions
+to news, leading to larger short-term return reversals. Consistent with this hypothesis, we
+identify a significant pattern in weekly U.S. stock returns for lottery-like stocks, defined by
+high recent maximum daily returns (MAX). Specifically, high-MAX stocks that were past 1week losers (or winners) exhibit notably positive (or negative) returns in the following week.
+Applying a short-term reversal strategy to high-MAX stocks generates an average weekly return
+of 1.66%, significantly outperforming the 0.65% return from the same strategy applied to lowMAX stocks. This result remains robust even after controlling for market microstructure biases
+and survives a series of robustness tests. Interestingly, the MAX-enhanced reversal strategy
+proves effective only when retail order imbalance is in the highest quintile. This result holds
+across both value-weighted and equal-weighted portfolios, underscoring the pivotal role of retail
+investors. Taken together, our findings highlight a new channel through which retail investors’
+preference for lottery-like payoffs amplifies their overreactions, enhancing the profitability of
+short-term reversal strategies.
+
+1. Introduction
+Subrahmanyam (1991) presents a model demonstrating that increased variance in liquidity trades reduces price efficiency,
+assuming either market makers or privately informed traders are risk averse.1 Motivated by these theoretical insights, we hypothesize
+that lottery-seeking investors’ trading activity has a pronounced impact on stock prices, amplifying volatility. In response, riskaverse market makers may temporarily scale back liquidity provision, leading to lower price efficiency and higher anomaly profits.
+Furthermore, investors’ preference for lottery-like payoffs may intensify their overreaction to news, leading to a predictable pattern
+of price inefficiency that manifests in short-term reversals.
+Consistent with this hypothesis, we discover a novel empirical pattern among stocks with lottery-like characteristics. We
+document that lottery-like stocks can experience significantly larger positive or negative weekly returns, depending on whether they
+
+I We thank Chris Stivers, two anonymous referees, an associate editor, and seminar participants from Old Dominion University for encouragement and many
+helpful comments. We are also grateful to Ken French, Jeff Wurgler, and Lu Zhang for making their data public on their websites.
+∗ Corresponding author.
+E-mail addresses: cchen027@odu.edu (C. Chen), acohen@odu.edu (A. Cohen), qliang@drew.edu (Q. Liang), lsun@odu.edu (L. Sun).
+1 Specifically, proposition 2 of Subrahmanyam’s paper addresses the case where informed traders are risk averse, while proposition 6 considers the scenario
+where market makers as risk averse and informed traders as risk neutral.
+
+https://doi.org/10.1016/j.jempfin.2025.101608
+Received 12 February 2024; Received in revised form 18 February 2025; Accepted 5 March 2025
+Available online 15 March 2025
+0927-5398/© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+were past 1-week losers or winners, compared to stocks lacking these characteristics. Leveraging this insight, we show that a shortterm reversal strategy, which capitalizes on the divergence among lottery-like stocks, can yield both statistically and economically
+significant profits.
+Our study also builds on Lehmann (1990) and Cooper (1999), who show that short-term reversal strategies generate substantial
+profits in weekly U.S. stock returns, attributing this to investor overreaction to news. However, these studies do not identify the
+underlying cause of this overreaction. We address this gap by linking investor overreaction to their preference for lottery-like payoffs,
+proxied by the maximum daily return (MAX) variable introduced by Bali et al. (2011).
+Our main contributions to the related literature are multifaceted. First, since our primary interest is in the return patterns in
+weekly stock returns, we extend the work of Bali et al. (2011) by showing that the MAX anomaly also exists in weekly U.S. stock
+returns. Specifically, we find that high-MAX stocks from the prior week significantly underperform low-MAX stocks for at least two
+subsequent weeks. This suggests that the MAX anomaly is more pervasive than previously thought, occurring in both monthly and
+weekly stock returns.
+Second, aligning with our main hypothesis that investors’ demand for lottery-like characteristics in stocks can exacerbate their
+overreaction to news, we find that, when stocks are double-sorted on both MAX and past 1-week returns, high-MAX stocks that were
+also past 1-week losers (winners) earn significantly positive (negative) average returns, resulting in a highly profitable short-term
+reversal strategy. Strikingly, this reversal strategy implemented on high-MAX stocks significantly outperforms the same strategy
+implemented on low-MAX stocks. In our view, this stark contrast bolsters our premise that lottery-demand induced overreaction
+significantly contributes to the success of short-term reversal strategies.
+More specifically, we feature an important temporal separation between the timing of MAX and past returns in our main analysis.
+We first sort stocks into quintile portfolios based on their MAX in week 𝑡 − 2 in order to identify stocks with lottery-like features.
+Within each MAX quintile, we then further sort stocks based on their returns in week 𝑡 − 1, which we use as a proxy to capture
+positive or negative news flows for each stock during that week. Intriguingly, we report that high-MAX loser (winner) stocks earn
+an average weekly return of 0.89% (−0.77%) in an equal-weighted portfolio in week 𝑡, resulting in a weekly average return of
+1.66% for the weekly reversal strategy in our sample from July 1963 to December 2022. In comparison, a similar reversal strategy
+implemented on low-MAX stocks only yields an average weekly return of 0.65%, with past 1-week losers (winners) earning 0.43%
+(−0.22%). Thus, the MAX effect widens the return differential between past short-term losers and past short-term winners, consistent
+with our hypothesis that investors’ obsession with lottery like payoffs exacerbates their overreaction and leads to higher reversal
+profits.
+To ensure the robustness of our baseline results regarding the measurement of a stock’s lottery characteristics, we first explore
+alternative measures of MAX. We report that our main results remain consistent when estimating MAX using different time frames:
+4-week, 13-week, and 26-week windows. Additionally, we create a new lottery likeness index variable, calculated by averaging the
+z-scores of maximum daily return, idiosyncratic skewness, and idiosyncratic volatility. Our findings remain remarkably consistent
+when we apply these alternative measures to assess a stock’s lottery characteristics.
+Further bolstering our main hypothesis, in a triple-sorted portfolio analysis, we examine the interaction between retail order
+imbalance, MAX, and past weekly returns. Our findings indicate that the MAX-enhanced reversal strategy generates significant
+returns only when retail order imbalance is in the highest quintile. This pattern holds across both value-weighted and equal-weighted
+portfolios, supporting the view that retail investors drive overreaction by chasing lottery-like stocks.
+Our main findings withstand a comprehensive series of robustness tests. They are evident in both portfolio analysis and Fama–
+MacBeth cross-sectional regressions. They remain consistent across risk adjustments based on the Fama and French (1992, 2015)
+factors, along with an additional momentum factor, as well as the Q-factor model proposed by Hou et al. (2015). Notably, our
+results are highly significant across two distinct sub-periods, which is particularly impressive considering that the unconditional
+short-term reversal strategy has weakened significantly in recent years due to increased market liquidity and the decimalization of
+price quotes.
+To further address concerns about potential biases induced by market microstructure, we apply methodologies from Blume and
+Stambaugh (1983) and Asparouhova et al. (2010), confirming that our findings remain robust even after controlling for these biases.
+Additionally, we demonstrate that the MAX-enhanced short-term reversal strategy achieves comparable performance when portfolios
+are constructed using residual returns from the Fama–French three-factor model, as shown in Blitz et al. (2013).
+Moreover, our findings on the divergence in portfolio performance between high-MAX past short-term winners and losers
+challenge existing theories on investors’ lottery-like preferences. Barberis and Huang (2008) propose a model where investors, in
+addition to holding the tangency portfolio, include a security with positively skewed payoffs in equilibrium. Bali et al. (2011) argue
+that the MAX effect supports this model, as the skewed securities in their framework generate negative average returns, consistent
+with high-MAX stocks. However, our results suggest that this model falls short in explaining the dynamic patterns we observe,
+particularly the significantly positive returns earned by high-MAX past short-term losers.
+An et al. (2020) find that the performance of lottery-like stocks depends on reference points, with stocks having high capital
+gains overhang (CGO) generally outperforming those with low CGO. However, since a stock’s classification as a 1-week winner or
+loser is likely unrelated to its CGO — measured over a five-year horizon — our results remain puzzling within the framework of their
+reference-dependent preference theory. Furthermore, our findings cannot be solely explained by fluctuations in investor sentiment
+(Baker and Wurgler, 2006), as the MAX-enhanced reversal strategy is effective regardless of whether investor sentiment is high or
+low.
+In summary, this study advances the literature by offering new empirical insights into investors’ preferences for lottery-like
+stocks, short-term reversals, and their interaction. We provide strong evidence that short-term reversals are more pronounced
+2
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+among high-MAX stocks, reinforcing the idea that investor overreaction is amplified for stocks with lottery characteristics. If
+this overreaction results from pent-up demand among lottery-seeking uninformed traders, our findings align with and extend the
+theoretical framework of Subrahmanyam (1991), which suggests that greater variance in liquidity trades reduces price efficiency.
+The remainder of this paper proceeds as follows. Section 2 provides a brief discussion of related literature and states our main
+hypothesis. Section 3 describes the data as well as the sample selection process. We present our main empirical findings in Section 4,
+and study the empirical implications of the overreaction hypothesis in Section 5. Additional robustness tests are shown in Section 6.
+We offer some concluding remarks in Section 7.
+2. Discussion of related literature and hypothesis development
+The ideas in this paper are related to two distinct branches of the existing literature: short-term reversals in stock returns and
+investors’ preference for lottery-like payoff. We discuss the related literature on these two important topics as well as the main
+hypothesis for this study.
+2.1. Stocks with lottery-like payoffs
+There exists ample evidence that investors often chase highly skewed returns that resemble lotteries. For example, Bali, Cakici,
+and Whitelaw (2011) investigate investors’ preference for lottery-like stocks and find a significant negative cross-sectional relation
+between expected stock returns and maximum daily returns in the past month. Eraker and Ready (2015), Byun and Kim (2016),
+Green and Hwang (2012), and An, Wang, Wang, and Yu (2020) study investors’ lottery-like preference in the context of OTC stocks,
+options, IPO stocks, and anomalies, respectively. In an interesting study, Liu et al. (2020) show that the demand for lottery-like
+stocks is stronger ahead of earnings announcements. In contrast to the standard underperformance of these stocks, lottery-like
+stocks outperform non-lottery stocks by about 52 basis points in the 5-day window ahead of earnings announcements. A partial list
+of other related studies includes: Boyer et al. (2010), Mitton and Vorkink (2007), Conrad et al. (2013) and Conrad et al. (2014).
+Kumar (2009) provides strong evidence that confirms the close connection between retail investors’ demand for stocks with
+lottery features and their propensity to gamble. He documents that the same social-economic factors that induce greater expenditure
+in lotteries are also linked to greater investments in stocks with lottery-like features. One of the key implications of Kumar’s study is
+that state lotteries and lottery-type stocks can act as complements. Gao and Lin (2015) and Dorn et al. (2015) find direct evidence
+of this substitution effect between state lotteries and lottery-like stocks with data from Taiwan and Germany, respectively.
+The model developed by Barberis and Huang (2008) offers a theoretical explanation of investors demand for stocks with lotterylike characteristics under the framework of Tversky and Kahneman’s (1992) cumulative prospect theory. With the help from a
+novel equilibrium concept with nonunique global optima, they find that contrary to the prediction of the standard expected utility
+theory, a stock’s idiosyncratic skewness is priced. In other words, a positively skewed stock can be ‘‘overpriced’’ and can earn a
+negative average excess return in their model. Bordalo et al. (2013) construct an alternative theory to Barberis and Huang (2008),
+and argue that payoff salience drives investors’ demand for risky assets. We note that both models are only capable of explaining
+the unconditionally negative average returns earned by lottery-like stocks, but they are silent on why returns on lottery-like stocks
+are dependent upon their recent loser/winner status.
+An, Wang, Wang, and Yu (2020) report that the performance of lottery-like stocks are reference-dependent, where the reference
+prices are based on the CGO variable proposed by Grinblatt and Han (2005). After double-sorting stocks on MAX and CGO, An
+et al. (2020) find that in their sample, high-MAX stocks severely underperform low-MAX stocks only when CGO is low. When
+CGO is high, high-MAX stocks actually outperform low-MAX stock by 0.54% per month. They conjecture that this result is likely
+driven by investors’ reference-dependent preference. Specifically, low-CGO stocks are where investors have capital losses. Due to the
+break-even effect and the aversion to loss realization, investors with capital losses often take the chance that can potentially recover
+their prior losses, and the urge to break even can induce investors with prior losses to take risky gambles that they otherwise would
+not have taken. We point out that reference-dependent preference hypothesis proposed by An et al. (2020) is unlikely to explain
+our main results for the following two reasons. First, they find that lottery-like stocks earn negative returns when there is a capital
+loss, but we find that it is the high-MAX past winner stocks that underperform. At least on a short-term basis, owners of past winner
+stocks should carry a capital gain rather than loss. Second, a stock’s status as 1-week winner or loser is likely unrelated to its CGO,
+which is often computed with a long-term (5-year) rolling window.
+2.2. Short-term reversals
+Contrary to the tenets of efficient market hypothesis, empirical studies have consistently demonstrated the potential for active
+trading and investing strategies to achieve significant excess returns based on a stock’s past return patterns. These strategies can be
+broadly categorized into two types: momentum strategies, which involve buying past short-term winners and selling past short-term
+losers, and reversal strategies, which involve buying past short-term losers and selling past short-term winners. While momentum
+strategies tend to perform well over the medium-term, typically three to twelve months, contrarian strategies have shown success in
+both the very short-term (within a month, e.g. Jegadeesh (1990) and Lehmann (1990)) and the very long-term (three to five years).
+The existing literature posits that short-term contrarian profits are most likely driven by non-informational liquidity shocks
+(e.g. Grossman and Miller (1988), Campbell et al. (1993), Avramov et al. (2006), and Nagel (2012)). We point out that this
+explanation seems plausible and is consistent with the fact that unconditionally profits to short-term reversal trading strategies
+3
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+are known to have declined since the initial discovery in 1990 (e.g., Chordia et al. (2014) and Stivers and Sun (2013)), likely due
+to improvements in market liquidity in recent years resulting from market reforms such as the decimalization of price quotations.
+However, we also believe that liquidity provision is likely to be only one of many contributing factors that can account for the
+success of short-term reversal strategies. The most likely alternative explanation seems to be investors’ overreaction to news, and
+should be accredited to Lehmann (1990), who argued forcefully that ‘‘the predictability of equity returns may reflect the overreaction
+of stocks prices, ‘fads’, or the cognitive misconception of investors in an inefficient market’’. Cooper (1999) used filter rules on lagged
+weekly returns and volumes and found ‘‘evidence of significant overreaction profits for large-capitalization NYSE and AMEX stocks’’.
+A number of studies have investigated the interaction between short-term reversal and other important economic or market
+variables. For instance, Da et al. (2014) study the impact of fundamental news, and find that an enhanced reversal strategy based on
+residual returns after controlling for cash flow news are much more profitable than the standard short-term reversal strategy. Hameed
+and Mian (2015) propose an intra-industry reversal strategy and find that reversal strategies based on industry-adjusted returns are
+more likely to capture deviations from fundamental values. Cheng et al. (2017) find that fluctuations in liquidity provisions triggered
+by the exit of institutional investors can significantly impact short-term reversals.
+2.3. Main hypothesis and empirical implications
+In this study, we aim to deepen our understanding of the psychological foundations behind investors’ overreaction and its
+effects on short-term market reversals. We hypothesize that investors’ attraction to lottery-like payoffs may be a key driver of this
+overreaction. To test this hypothesis, we propose investigating the following empirical implications.
+First, if investors’ preference for lottery-like stocks contributes to their overreaction to news, then short-term reversal trading
+strategies should be more effective when applied to stocks with lottery-like characteristics compared to those without. To see this,
+we point out that investors with lottery preferences act as uninformed liquidity traders in the sense of Kyle (1985) model. Thus, as
+shown by Subrahmanyam (1991), under the assumption that either privately informed traders or market makers are risk-averse, an
+increase in the variance of liquidity trades (due to lottery preference in the current context) should reduce price efficiency and lead
+to higher reversal profits à la Campbell et al. (1993).
+Second, we anticipate that the MAX-enhanced short-term reversal strategies will be more profitable for smaller firms and less
+liquid stocks. This is due to the fact that the pent-up demand from lottery-seeking investors is likely to exert a greater influence
+on the prices of small and illiquid stocks, thereby amplifying their volatility. Following the reasoning of Subrahmanyam (1991), an
+increase in the variance of these stocks should deter risk-averse market makers, resulting in higher returns for reversal strategies in
+these scenarios.
+Third, we further conjecture that retail investors are likely to dominate the population of investors who chase lottery-like stocks.
+There is ample empirical evidence that suggest retail investors are unsophisticated and are more susceptible to various behavioral
+biases such as overconfidence (e.g., Barber and Odean (2000). As such, we propose to test this empirical implication by exploring
+the relation between retail trading activities and short-term reversal strategies implemented on stocks with lottery-like features.
+3. Data description
+Our main sample consists of domestic common stocks (share code 10 or 11) listed on the New York Stock Exchange (NYSE),
+American Stock Exchange (AMEX), and National Association of Securities Dealers Automated Quotations (NASDAQ) from July 1963
+to December 2022. We rely on both the monthly and daily data files from the Center for Research in Security Prices (CRSP) database
+to obtain stock price, trading volume, shares outstanding, exchange codes, and so on. The CRSP daily data files are used to help
+construct weekly stock returns. Financial statement data are collected from the Compustat database. The Fama–French factors are
+from Ken French’s website. The q-factor model data are from Lu Zhang’s website. In addition, we also use the investor sentiment
+data provided by Jeffrey Wurgler.
+Since our empirical work mainly focuses on weekly returns, we construct the (weekly) maximum daily return variable (MAX)
+following the ideas from Bali, Cakici, and Whitelaw (2011). Specifically, MAX is defined as the largest daily return in a week. As
+noted by Bali, Cakici, and Whitelaw (2011), the MAX variable is a simple and intuitive measure of investors’ demand for lottery-like
+payoffs. We verify that the weekly MAX behaves similarly to Bali et al.’s (2011) monthly MAX variable. To ensure robustness, we
+also confirm our main findings in monthly returns.
+To explore the implications from the reference-dependent preferences hypothesis of An et al. (2020), we run tests based on the
+capital-gains-overhang (CGO) variable from Grinblatt and Han (2005). Specifically, we compute the CGO measure for each stock,
+based on prices and turnover over the past 5 years. The reference price for a given stock as follows:
+(
+)
+𝑇
+𝑛−1
+∏
+1 ∑
+𝑅𝑡 =
+𝑉𝑡−𝑛
+(1 − 𝑉𝑡−𝑛+𝜏 ) 𝑃𝑡−𝑛 ,
+(1)
+𝐾 𝑛=1
+𝜏=1
+where 𝐾 is a normalizing constant to ensure that the weights sum up to one and, 𝑉𝑡 is the turnover ratio, and 𝑃𝑡 is the share price
+at time 𝑡. Hence the reference price is computed as a turnover-weighted average of past prices, where the weights (the term in
+parenthesis) reflect the probability that shares purchased at date 𝑡 − 𝑛 have not been traded since then. Given 𝑅𝑡 , one can define a
+capital gains overhang (CGO) variable as follows.
+𝐶𝐺𝑂𝑡 =
+
+𝑃𝑡−1 − 𝑅𝑡
+.
+𝑃𝑡−1
+
+(2)
+4
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+To assess retail trading activity, we follow the methodology of Boehmer et al. (2021) by calculating the retail order imbalance
+using off-exchange transaction data (exchange code ‘‘D’’) from the Trade and Quote (TAQ) database, covering the period from
+January 2010 to December 2019. Specifically, for a transaction with price 𝑃 , we classify it as a retail buy or sell transaction
+if mod(100 × 𝑃 , 1) falls within the intervals (0.6, 1) or (0, 0.4). Transactions not meeting these criteria are categorized as nonretail. On each portfolio formation date (week 𝑡 − 1), we aggregate retail buy and sell transactions from weeks 𝑡 − 1 to 𝑡 − 4
+to derive the retail buy volume (rbvol) and retail sell volume (rsvol). The retail order imbalance is then calculated as follows:
+|
+|
+retail order imbalance = | rbvol−rsvol
+|. Please note here that we use the absolute value since our focus is on the magnitude of the
+| rbvol+rsvol |
+retail order imbalance rather than its direction.
+To measure stock liquidity, we employ three metrics: Illiquidity (Amihud (2002)), Turnover, and Bid–Ask Spread (Corwin and
+Schultz (2012)). All calculations are based on data from the CRSP daily data file. We estimate Illiquidity using daily data from weeks
+𝑡 − 1 to 𝑡 − 4, while Turnover is computed as the average weekly stock turnover over the four weeks. For the Bid–Ask Spread, we
+apply the methodology from Corwin and Schultz (2012), calculating daily spread estimates using the high and low prices from two
+consecutive days. The Bid–Ask Spread for each portfolio formation date is then taken as the average spread estimates over weeks
+𝑡 − 1 to 𝑡 − 4.
+To report the risk-adjusted returns, we consider three benchmark asset pricing models. First, we augment the Fama and French
+3-factor model with an additional momentum factor (FF4), which is also known as the Carhart (1997) model in the literature.
+Second, we augment the Fama and French (2015) 5-factor model with an additional momentum factor (FF6). Third, we also rely
+on the Hou, Xue and Zhang (2015) q-factor model for risk adjustments. We find that our main results are robust and stable across
+all of these factor models.
+4. Main empirical results
+4.1. The MAX anomaly in weekly stock returns
+Since our primary interest is in reversals in weekly stock returns, we first present evidence about the existence of Bali et al.’s
+(2011) MAX anomaly in the weekly data. Table 1 of Bali et al. (2011) report that, from 1962 to 2005, the high minus low valueweighted (equal-weighted) decile portfolios sorted on MAX from the past one month has an average monthly return of −1.03%
+(−0.65%). In other words, unconditionally lottery-like stocks are known to severely underperform non-lottery-like stocks in monthly
+data.
+As far as we know, we are the first in the related literature to report that the MAX anomaly also exists in weekly U.S. stock
+returns. In Panel A of our Table 1, we form quintile portfolios by sorting stocks on the MAX variable from the past week at 𝑡 − 1.
+We report both equal-weighted and valued-weighted average weekly portfolio returns from week 𝑡. Consistent with evidence from
+monthly data, we find that the equal-weighted high minus low MAX portfolio earns an average weekly excess return of −0.43%
+(t-statistic = −11.71). Likewise, the value-weighted portfolio has an average weekly excess return of −0.35% (t-statistic = −7.96).
+Similar results are obtained after risk-adjustments by all three factor models.
+In Panel B, we form quintile portfolios by sorting stocks on the MAX from week 𝑡 − 2. We skip week 𝑡 − 1 and report the average
+weekly portfolio returns from week 𝑡. In this case, we find that the equal-weighted high minus low MAX portfolio has an average
+weekly excess return of −0.11% (t-statistic = −3.27). Similarly, the value-weighted portfolio has an average weekly excess return
+of −0.11% (t-statistic = −2.65).
+Taken together, the results from Table 1 indicate that there is strong evidence that the MAX anomaly is highly significant in
+weekly stock returns and the effect seems to persist for at least two weeks after portfolio formation.
+4.2. Portfolios double-sorted on MAX and past 1-week returns
+4.2.1. Baseline results
+Panels A and B of Table 2 present our main empirical findings for the sample from July 1963 to December 2022. To establish
+these baseline results, we proceed to examine the interaction between MAX and past 1-week returns (PRET) by conducting a portfolio
+analysis. Specifically, each week, we first group stocks into quintile portfolios by sorting on the MAX value of each stock from week
+𝑡−2. Then within each MAX quintile, we further sort stocks based on their past 1-week returns (PRET) from week 𝑡−1. As mentioned
+earlier, we find it important to impose this temporal separation between MAX and PRET to help with interpretation of results. Thus,
+we form 25 portfolios (5 by 5) double-sorted on MAX and PRET. The average weekly excess returns as well as factor-model adjusted
+alphas for both equal-weighted and value-weighted portfolios are presented in Panels A and B of Table 2, respectively.
+We report two interesting results. First, recall that Bali et al. (2011) documents that unconditionally high-MAX stocks severely
+underperform low-MAX stocks, and the high-minus-low MAX long-short portfolio suffers from significantly negative average returns.
+However, the results from Table 2 depict a different picture. We find that the underperformance by high-MAX stocks is mostly
+confined to high-MAX past short-term winners stocks. Surprisingly, among past loser stocks, high-MAX stocks actually outperform
+low-MAX stocks.
+For example, when we look at equal-weighted portfolios from Panel A, the high-MAX past short-term winners suffer from an
+average weekly return of −0.77% with a highly significant Newey–West 𝑡-statistic of −9.51. In contrast, the high-MAX past shortterm losers from the same panel stand out with an average weekly gain of 0.89% (𝑡-statistics = 10.99). By comparison, the low-MAX
+past winner portfolio has an average weekly return of −0.22% (𝑡-statistic of −3.58), and the low-MAX past loser portfolio has an
+5
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 1
+Returns and alphas of Weekly portfolios sorted on MAX.
+Panel A: Weekly Portfolios sorted on MAX
+MAX
+Low
+
+High minus Low
+2
+
+3
+
+4
+
+High
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.22
+(4.27)
+
+0.13
+(2.17)
+
+−0.20
+(−2.81)
+
+−0.43
+(−11.71)
+
+−0.44
+(−15.35)
+
+−0.40
+(−14.81)
+
+−0.39
+(−13.74)
+
+0.10
+(2.52)
+
+0.04
+(0.83)
+
+−0.07
+(−1.20)
+
+−0.35
+(−7.96)
+
+−0.36
+(−9.45)
+
+−0.28
+(−7.89)
+
+−0.28
+(−7.65)
+
+Panel A.1: equal-weighted
+0.23
+(4.65)
+
+0.25
+(5.25)
+
+Panel A.2: value-weighted
+0.27
+(6.91)
+
+0.17
+(4.33)
+
+Panel B: Weekly Portfolios sorted on MAX (skip 1 week)
+MAX
+Low
+
+High minus Low
+2
+
+3
+
+4
+
+High
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.19
+(3.67)
+
+0.15
+(2.57)
+
+−0.00
+(−0.06)
+
+−0.11
+(−3.27)
+
+−0.13
+(−5.01)
+
+−0.08
+(−3.50)
+
+−0.08
+(−2.87)
+
+0.14
+(3.32)
+
+0.12
+(2.45)
+
+0.06
+(0.92)
+
+−0.11
+(−2.65)
+
+−0.15
+(−4.25)
+
+−0.07
+(−2.19)
+
+−0.07
+(−2.10)
+
+Panel B.1: equal-weighted
+0.10
+(2.07)
+
+0.21
+(4.48)
+
+Panel B.2: value-weighted
+0.17
+(4.55)
+
+0.14
+(3.76)
+
+In Panel A, quintile portfolios are formed by sorting stocks on the maximum daily return (MAX) from week 𝑡 − 1. We report the average weekly portfolio returns
+from week 𝑡. In Panel B, quintile portfolios are formed by sorting stocks on the MAX from week 𝑡 − 2. We skip week 𝑡 − 1 and report the average weekly portfolio
+returns from week 𝑡. Panels A.1 and A.2 (Panels B.1 and B.2) report the results of equal-weighted and value-weighted portfolios, respectively. The table also
+reports the average weekly excess returns as well as factor-model adjusted alphas, which are calculated based on the four-factor Fama–French–Carhart model
+(FF4), the six-factor Fama–French-UMD model (FF6), and Hou, Xue, and Zhang’s (2015) Q-factor model. The sample period is from July 1963 to December
+2022. Average returns and alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in
+parentheses.
+
+average weekly gain of 0.43% (𝑡-statistics = 7.25). Thus, while the high-MAX past short-term winners underperform their low-MAX
+counterparts by 0.55% per week, the high-MAX past short-term losers outstrip their low-MAX counterpart by an impressive 0.46%
+per week. Similar results are also obtained using value-weighted portfolios. Panel B shows that the high-MAX past short-term losers
+(winners) has a highly significant weekly average return of 0.68% (−0.47%), whereas the low-MAX past short-term losers (winners)
+has an average return of weekly average return of 0.51% (0.01%). Thus, the unconditional results from Bali et al. (2011) seem to
+hold only among past short-term winners and disappear among past short-term losers.
+While at odds with the unconditional finding from Bali et al. (2011), the results described above are consistent with the following
+story. For stocks that are high-MAX past short-term winners, investors’ extended exuberance pushes the share prices of these stocks
+to the overvaluation stratosphere at least temporarily, resulting in an underperformance in the next week. On the other hand, for
+stocks that are high-MAX past short-term losers, the pullback in their share prices triggers a buying opportunity for investors who
+prefer positively skewed stocks at bargain prices. The latter observation is important because it shows that investing in stocks with
+lottery-like payoff does not automatically makes a poor investment decision. With patience, investors who buy at fair prices can
+earn significantly positive returns even from stocks with lottery-like payoffs.
+Second, we also observe that the disparity in the performance of past short-term losers and past short-term winners are correlated
+with investors’ lottery demand as proxied by the MAX variable. Consistent with our main hypothesis that investors’ penchant for
+lottery-like payoffs exacerbates their overreaction to news, we find that a short-term reversal strategy implemented on high-MAX
+stocks significantly outperform the same strategy implemented on low-MAX stocks.
+For instance, the short-term reversal strategy that longs the high MAX past short-term losers and shorts the high MAX past shortterm winners results in a highly significant average return of 1.66% per week. Remarkably, based on the alphas from popular factor
+models, our findings remain consistent after risk adjustments. For example, the q-factor model alpha for the reversal strategy among
+high-MAX stocks in Panel A is 1.70%. When going along the MAX quintiles from high to low, we find that returns to short-term
+reversal strategies drop to only 0.65% (low MAX), accentuating the role played by elevated levels of MAX on short-term reversals.
+In Panel B, we report that the results from value-weighted portfolios are consistent with those from equal-weighted portfolios. For
+instance, the average weekly returns of short-term reversal strategies decrease almost monotonically from 1.14% among high-MAX
+stocks to merely 0.50% for low-MAX stocks.
+In summary, the results from Table 2 highlight the importance of taking into account investors’ appetite for lottery-like stocks
+when implementing the short-term reversal strategy. We document that short-term reversal strategies among high-MAX stocks are
+way more profitable than those among low-MAX stocks. Surprisingly, the high-MAX past short-term losers outperform their lowMAX counterparts by a significant margin, which appears inexplicable under the framework of existing theories on investors’ lottery
+preferences.
+6
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 2
+Weekly returns and alphas of portfolios doubly sorted on MAX and PRET.
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+−0.77
+(−9.51)
+−0.31
+(−4.95)
+−0.13
+(−2.28)
+−0.00
+(−0.04)
+−0.22
+(−3.58)
+
+1.66
+(24.88)
+1.04
+(22.31)
+0.74
+(20.03)
+0.52
+(17.07)
+0.65
+(16.28)
+
+1.65
+(24.45)
+1.02
+(22.35)
+0.72
+(19.62)
+0.50
+(16.59)
+0.63
+(15.49)
+
+1.68
+(24.43)
+1.04
+(22.44)
+0.74
+(19.41)
+0.51
+(16.16)
+0.65
+(15.53)
+
+1.70
+(22.63)
+1.03
+(21.43)
+0.73
+(18.62)
+0.50
+(15.54)
+0.63
+(14.54)
+
+−0.47
+(−6.69)
+−0.25
+(−4.33)
+−0.14
+(−2.85)
+−0.06
+(−1.29)
+0.01
+(0.11)
+
+1.14
+(16.54)
+0.78
+(13.93)
+0.59
+(13.62)
+0.46
+(12.00)
+0.50
+(10.67)
+
+1.12
+(16.34)
+0.76
+(14.15)
+0.58
+(13.31)
+0.44
+(12.16)
+0.48
+(10.34)
+
+1.17
+(16.67)
+0.78
+(14.59)
+0.59
+(13.34)
+0.45
+(11.75)
+0.48
+(9.79)
+
+1.19
+(15.75)
+0.77
+(13.64)
+0.59
+(12.85)
+0.43
+(11.09)
+0.47
+(9.35)
+
+Panel A: Double sorts on MAX and Past-Returns — equal-weighted
+High
+4
+3
+2
+Low
+
+0.89
+(10.99)
+0.73
+(10.28)
+0.61
+(10.05)
+0.52
+(9.38)
+0.43
+(7.25)
+
+0.15
+(2.12)
+0.23
+(3.84)
+0.22
+(4.23)
+0.18
+(3.93)
+0.10
+(2.20)
+
+−0.06
+(−0.91)
+0.11
+(1.82)
+0.15
+(2.94)
+0.19
+(4.05)
+0.09
+(1.95)
+
+−0.22
+(−3.12)
+0.02
+(0.34)
+0.11
+(2.20)
+0.18
+(3.86)
+0.11
+(2.17)
+
+Panel B: Double sorts on MAX and Past-Returns — value-weighted
+High
+4
+3
+2
+Low
+
+0.68
+(8.09)
+0.54
+(7.73)
+0.46
+(8.60)
+0.40
+(8.18)
+0.51
+(9.56)
+
+0.29
+(4.03)
+0.27
+(4.81)
+0.24
+(5.27)
+0.18
+(4.49)
+0.22
+(5.34)
+
+0.10
+(1.52)
+0.10
+(2.00)
+0.15
+(3.31)
+0.12
+(3.08)
+0.15
+(3.89)
+
+−0.09
+(−1.37)
+0.00
+(0.09)
+0.03
+(0.67)
+0.10
+(2.61)
+0.13
+(3.16)
+
+Panel C: Subperiod Analysis
+Jul. 1963–Mar. 1993
+
+Apr. 1993–Dec. 2022
+
+Panel C.1: Double sorts on MAX and Past-Returns — equal weighted
+MAX
+
+High
+4
+3
+2
+Low
+
+Losers minus Winners
+
+Losers minus Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+2.07
+(29.38)
+1.28
+(24.03)
+0.92
+(20.90)
+0.64
+(16.94)
+0.87
+(16.95)
+
+2.09
+(30.28)
+1.28
+(23.83)
+0.92
+(20.29)
+0.64
+(15.99)
+0.89
+(17.12)
+
+2.10
+(29.04)
+1.31
+(23.35)
+0.94
+(19.50)
+0.67
+(15.74)
+0.93
+(17.03)
+
+2.21
+(28.68)
+1.33
+(23.08)
+0.96
+(19.12)
+0.65
+(14.98)
+0.91
+(15.78)
+
+1.25
+(11.95)
+0.81
+(11.12)
+0.57
+(9.99)
+0.40
+(8.71)
+0.43
+(7.61)
+
+1.22
+(11.56)
+0.76
+(11.05)
+0.53
+(9.57)
+0.36
+(8.37)
+0.38
+(6.85)
+
+1.26
+(11.70)
+0.78
+(11.20)
+0.54
+(9.55)
+0.37
+(8.09)
+0.40
+(6.84)
+
+1.24
+(11.41)
+0.77
+(11.28)
+0.53
+(9.69)
+0.36
+(8.37)
+0.39
+(6.98)
+
+Panel C.2: Double sorts on MAX and Past-Returns — value weighted
+MAX
+
+High
+4
+3
+2
+Low
+
+Losers minus Winners
+
+Losers minus Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+1.42
+(18.74)
+0.98
+(16.76)
+0.73
+(14.70)
+0.54
+(13.60)
+0.66
+(12.64)
+
+1.41
+(18.23)
+1.01
+(16.82)
+0.74
+(14.99)
+0.56
+(13.38)
+0.67
+(12.87)
+
+1.44
+(18.15)
+1.03
+(16.38)
+0.76
+(14.71)
+0.58
+(13.59)
+0.70
+(12.54)
+
+1.53
+(17.56)
+1.06
+(15.56)
+0.79
+(14.43)
+0.57
+(12.67)
+0.72
+(11.45)
+
+0.86
+(7.72)
+0.59
+(6.24)
+0.46
+(6.55)
+0.37
+(5.75)
+0.34
+(4.45)
+
+0.82
+(7.63)
+0.54
+(6.10)
+0.42
+(6.03)
+0.34
+(5.55)
+0.29
+(3.97)
+
+0.88
+(7.93)
+0.56
+(6.37)
+0.45
+(6.24)
+0.34
+(5.36)
+0.29
+(3.75)
+
+0.86
+(7.71)
+0.54
+(6.21)
+0.42
+(6.15)
+0.32
+(5.36)
+0.27
+(3.78)
+
+Double-sorted portfolios (5 by 5) are formed every week by sequentially sorting stocks on lagged values of their maximum daily return (MAX) from week 𝑡 − 2
+and then on their weekly returns (PRET) over the past week (i.e., week 𝑡 − 1). Panels A and B report the average returns of equal-weighted and value-weighted
+portfolios from week 𝑡, respectively. The table also reports the average weekly excess returns and alphas, which are calculated based on the four-factor Fama–
+French–Carhart model (FF4), six-factor Fama–French-UMD model (FF6), and Hou, Xue, and Zhang’s (2015) Q-factor model. The full sample period is from July
+1963 to December 2022. Panel C reports the results from two subperiods: July 1963 to March 1993 and April 1993 to December 2022. Average excess returns
+and alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+4.2.2. Subperiod analysis
+To ensure the robustness of our findings, in Panel C Table 2, we examine the changes in the profitability of short-term reversals
+by dividing our main sample into two equal sub-sample periods: July 1963 to March 1993 and April 1993 to December 2022. This
+division allows us to assess the extent of changes in the reversal phenomenon over time. To account for potential crowding effects
+7
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 3
+Portfolios sorted on alternative measures of MAX and PRET.
+MAX
+
+Equal-weighted
+
+Equal-weighted
+
+Losers minus Winners
+Excess
+
+Losers minus Winners
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+1.83
+(24.55)
+1.19
+(21.86)
+0.84
+(21.62)
+0.57
+(21.36)
+0.29
+(13.63)
+
+1.86
+(24.57)
+1.21
+(21.83)
+0.85
+(21.35)
+0.57
+(20.98)
+0.29
+(13.46)
+
+1.85
+(22.99)
+1.21
+(20.60)
+0.85
+(20.49)
+0.58
+(20.78)
+0.29
+(12.86)
+
+1.36
+(16.35)
+0.91
+(15.13)
+0.72
+(14.22)
+0.58
+(14.59)
+0.39
+(11.91)
+
+1.35
+(16.52)
+0.90
+(15.21)
+0.71
+(14.50)
+0.56
+(14.72)
+0.38
+(11.67)
+
+1.40
+(16.76)
+0.93
+(15.12)
+0.73
+(14.36)
+0.57
+(14.81)
+0.37
+(12.09)
+
+1.39
+(15.50)
+0.92
+(14.09)
+0.73
+(13.98)
+0.57
+(13.79)
+0.38
+(11.56)
+
+1.84
+(24.58)
+1.19
+(21.95)
+0.83
+(21.71)
+0.55
+(20.52)
+0.25
+(11.38)
+
+1.86
+(24.58)
+1.21
+(21.92)
+0.84
+(21.35)
+0.56
+(20.02)
+0.25
+(11.23)
+
+1.86
+(23.03)
+1.23
+(20.89)
+0.84
+(20.48)
+0.56
+(19.72)
+0.25
+(10.61)
+
+1.34
+(16.38)
+0.89
+(14.68)
+0.68
+(13.25)
+0.59
+(14.18)
+0.38
+(11.43)
+
+1.33
+(16.53)
+0.87
+(14.31)
+0.67
+(13.28)
+0.58
+(14.38)
+0.36
+(11.37)
+
+1.37
+(16.64)
+0.91
+(14.49)
+0.68
+(13.27)
+0.58
+(14.79)
+0.36
+(11.63)
+
+1.36
+(15.31)
+0.91
+(14.17)
+0.66
+(12.18)
+0.59
+(13.96)
+0.36
+(10.91)
+
+1.81
+(25.13)
+1.16
+(23.13)
+0.83
+(21.72)
+0.57
+(19.12)
+0.21
+(8.97)
+
+1.84
+(25.02)
+1.17
+(23.01)
+0.84
+(21.70)
+0.58
+(18.77)
+0.22
+(8.74)
+
+1.84
+(23.39)
+1.18
+(21.71)
+0.83
+(20.58)
+0.58
+(17.96)
+0.22
+(8.52)
+
+1.30
+(16.14)
+0.87
+(14.32)
+0.74
+(15.26)
+0.55
+(13.05)
+0.33
+(10.30)
+
+1.28
+(16.12)
+0.86
+(14.59)
+0.72
+(15.16)
+0.54
+(13.02)
+0.31
+(10.08)
+
+1.32
+(16.31)
+0.89
+(14.12)
+0.73
+(15.19)
+0.54
+(13.01)
+0.31
+(9.86)
+
+1.32
+(15.27)
+0.87
+(13.74)
+0.72
+(14.56)
+0.54
+(12.50)
+0.32
+(9.52)
+
+𝛼𝐹 𝐹 4
+
+Panel A: 26-Week MAX (MAX_26w)
+High
+4
+3
+2
+Low
+
+1.84
+(25.01)
+1.21
+(22.24)
+0.86
+(21.77)
+0.59
+(21.63)
+0.31
+(13.39)
+
+Panel B: 13-Week MAX (MAX_13w)
+High
+4
+3
+2
+Low
+
+1.85
+(25.11)
+1.21
+(22.16)
+0.85
+(22.48)
+0.57
+(20.71)
+0.27
+(11.22)
+
+Panel C: 4-Week MAX (MAX_4w)
+High
+4
+3
+2
+Low
+
+1.82
+(25.47)
+1.18
+(23.57)
+0.85
+(22.11)
+0.59
+(19.27)
+0.24
+(9.64)
+
+Weekly reversal portfolios based on double sorts (5 by 5) are formed every week from July 1963 to December 2022 by sequentially sorting stocks on alternative
+specifications of MAX (either MAX_26w, MAX_13w, or MAX_4w) and weekly stock returns (PRET) from the past week (i.e., week 𝑡 − 1). Panels A, B, and C
+report the results using MAX_26w (from weeks 𝑡 − 2 to 𝑡 − 27), MAX_13w (from weeks 𝑡 − 2 to 𝑡 − 14), and MAX_4w (from weeks 𝑡 − 2 to 𝑡 − 5), respectively. For
+both equal-weighted and value-weighted portfolios, the table reports the average weekly excess returns and alphas (in percentage terms) calculated based on
+the 4-factor Fama–French, 6-factor Fama–French, and q-factor models. Newey–West (1987) adjusted 𝑡-statistics are reported in parentheses.
+
+from investors attempting to exploit the documented anomaly, we begin the second date range in 1993, following the publication
+of the initial academic papers on short-term reversals in 1990.
+Consistent with previous research findings such as Chordia et al. (2014), our results reveal a consistent pattern that the short-term
+reversal effect has weakened over the second-half of the sample after the publications of related academic research. For example,
+among high-MAX stocks, the equal-weighted short-term reversal portfolio earns a highly significant average weekly return of 1.25%
+in the second half sample. While this is still impressive, it is lower than the 2.07% in the first half of the sample. Remarkably, we
+find that in all cases, short-term reversal strategies implemented on high-MAX stocks unequivocally earn high average returns than
+low-MAX stocks. For instance, among value-weighted weekly portfolios in the second half-sample (Panel C.2), the high MAX reversal
+strategy has an average weekly return of 0.86% whereas the corresponding low-MAX portfolio only earns an average weekly return
+of 0.34%.
+Overall we conclude that our main results remain intact and the MAX-enhanced reversal strategy is alive and well across both
+sub-sample periods.
+4.3. Results based on alternative measures of MAX
+Some readers might be concerned that our MAX measure, based on a 1-week horizon, could be too short and might result in
+a noisy estimate of investors’ preferences for lottery payoffs. To address this concern, we present alternative measures of MAX in
+Table 3, which include the maximum daily returns over a 4-week period (MAX_4w), a 13-week period (MAX_13w), and a 26-week
+period (MAX_26w). We analyze both equal-weighted and value-weighted portfolios using these measures.
+The results in Table 3 show that our main findings are robust across these alternative MAX measures. For example, in Panel A,
+using the 26-week MAX, the equal-weighted (value-weighted) reversal portfolio based on high-MAX stocks generates a statistically
+8
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 4
+Weekly returns and alphas of portfolios double-sorted on lottery-likeness index (LLI) and PRET.
+LLI
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+−0.19
+(−2.51)
+−0.01
+(−0.22)
+0.08
+(1.39)
+0.10
+(2.16)
+0.13
+(3.25)
+
+−0.86
+(−9.59)
+−0.39
+(−5.48)
+−0.22
+(−3.71)
+−0.09
+(−1.80)
+0.02
+(0.39)
+
+1.83
+(25.14)
+1.18
+(21.92)
+0.86
+(22.03)
+0.59
+(19.58)
+0.35
+(13.90)
+
+1.82
+(24.61)
+1.16
+(21.51)
+0.84
+(21.91)
+0.57
+(20.20)
+0.32
+(13.81)
+
+1.85
+(24.65)
+1.18
+(21.38)
+0.85
+(21.61)
+0.57
+(20.00)
+0.33
+(13.74)
+
+1.84
+(23.05)
+1.19
+(20.21)
+0.85
+(20.77)
+0.57
+(19.19)
+0.33
+(13.16)
+
+−0.00
+(−0.01)
+0.03
+(0.52)
+0.08
+(1.40)
+0.05
+(1.09)
+0.08
+(2.06)
+
+−0.52
+(−6.54)
+−0.26
+(−3.87)
+−0.20
+(−3.49)
+−0.11
+(−2.40)
+−0.04
+(−1.02)
+
+1.28
+(15.94)
+0.88
+(14.06)
+0.75
+(14.22)
+0.55
+(13.40)
+0.43
+(12.69)
+
+1.28
+(15.82)
+0.87
+(14.16)
+0.73
+(14.62)
+0.53
+(13.67)
+0.42
+(12.67)
+
+1.33
+(16.36)
+0.90
+(13.60)
+0.76
+(14.68)
+0.54
+(13.94)
+0.42
+(13.09)
+
+1.31
+(15.15)
+0.90
+(13.23)
+0.77
+(13.97)
+0.54
+(13.06)
+0.42
+(12.21)
+
+Panel A: Double sorts on LLI and Past-Returns (equal-weighted)
+High
+4
+3
+2
+Low
+
+0.97
+(11.15)
+0.79
+(10.73)
+0.64
+(10.43)
+0.50
+(9.55)
+0.36
+(8.00)
+
+0.13
+(1.61)
+0.23
+(3.56)
+0.23
+(4.24)
+0.22
+(4.67)
+0.15
+(3.77)
+
+−0.04
+(−0.58)
+0.09
+(1.44)
+0.15
+(2.63)
+0.16
+(3.46)
+0.14
+(3.58)
+
+Panel B: Double sorts on LLI and Past-Returns (value-weighted)
+High
+4
+3
+2
+Low
+
+0.76
+(7.96)
+0.62
+(7.61)
+0.55
+(8.32)
+0.44
+(8.18)
+0.39
+(8.85)
+
+0.23
+(3.11)
+0.29
+(4.36)
+0.24
+(4.33)
+0.22
+(4.72)
+0.19
+(5.14)
+
+0.10
+(1.55)
+0.12
+(1.91)
+0.13
+(2.39)
+0.12
+(2.63)
+0.11
+(2.97)
+
+Double-sorted portfolios (5 by 5) are formed every week from July 1963 to December 2022 by sequentially sorting stocks on lottery likeness index (LLI) and
+lagged weekly stock returns (PRET) over the past week (week 𝑡 − 1). The lottery likeness index is computed by averaging the z-scores of maximum daily return,
+idiosyncratic skewness, and idiosyncratic volatility from week 𝑡 − 2 to week 𝑡 − 27. The idiosyncratic skewness measure is estimated by following the methodology
+from Kumar (2009). Panels A and B report the results of equal-weighted and value-weighted portfolios, respectively. The table reports the average weekly excess
+returns and alphas, which are calculated based on the four-factor Fama–French, six-factor Fama–French, and q-factor models, respectively. Average excess returns
+and alphas are given in percentage terms. Newey–West (1987) adjusted 𝑡-statistics are reported in parentheses.
+
+significant weekly adjusted return of 1.86% (1.40%) according to the Fama–French 6-factor model, whereas the corresponding lowMAX reversal strategy produces an alpha of only 0.29% (0.37%). Additionally, the magnitude of average adjusted weekly returns
+varies monotonically across the five MAX quintile portfolios, reinforcing the robustness of our results.
+These observations are consistent across the 13-week and 4-week MAX measures as well. For instance, with the 4-week MAX,
+the equal-weighted (value-weighted) reversal portfolio for high-MAX stocks yields a significant weekly adjusted return of 1.84%
+(1.32%), while the low-MAX reversal strategy earns an alpha of just 0.22% (0.31%). This consistency highlights the robustness
+of our findings. Furthermore, the reversal profits observed with these alternative MAX measures are actually stronger than those
+reported in Table 2, suggesting that using longer portfolio formation periods may reduce noise and provide a clearer indication of
+investors’ lottery preferences.
+4.4. Results based on the alternative measure of investors’ lottery preference
+Bali, Cakici, and Whitelaw (2011) establish that the MAX variable is a robust indicator of investors’ lottery preferences. However,
+other measures, such as idiosyncratic skewness and idiosyncratic volatility, are also commonly used in the literature. To ensure that
+our main results are not specific to the MAX measure, we introduce a Lottery Likeness Index (LLI) in Table 4, which is constructed
+by averaging the z-scores of MAX, idiosyncratic skewness, and idiosyncratic volatility. Idiosyncratic skewness and idiosyncratic
+volatility are estimated using the methodology from Kumar (2009). The estimation period for all three variables (MAX, idiosyncratic
+skewness, and idiosyncratic volatility) span from week 𝑡 − 2 to week 𝑡 − 27. The LLI is designed to capture the common variations
+among these three variables.
+In Table 4, we form double-sorted portfolios (5 by 5) every week from July 1963 to December 2022 by sequentially sorting stocks
+on the LLI and lagged weekly stock returns. We report that our main findings remain intact after replacing MAX with the LLI. For
+instance, the equal-weighed (value-weighted) high-LLI reversal portfolio earns an average excess weekly return of 1.83% (1.28%),
+whereas the low-LLI reversal portfolio can only generate an average weekly excess return of 0.35% (0.43%). Similar patterns are
+observed when adjusting for various benchmark asset-pricing models. Notably, average returns decrease monotonically from high-LLI
+to low-LLI stocks, underscoring the strong relation between reversal portfolio returns and investors’ lottery preferences.
+5. Evidence from liquidity, size, and retail trading
+Our baseline results from Section 4 support our main hypothesis: that investor overreaction, driven by a preference for lotterylike payoffs, can lead to profitable short-term reversal strategies in weekly returns. In this section, we aim to further test additional
+implications that could strengthen the overreaction hypothesis.
+9
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+First, we anticipate that the price impact of investor overreaction will be more pronounced for stocks with lottery-like
+characteristics, especially among smaller and less liquid firms. Second, according to the overreaction hypothesis, retail investors
+— who are often less sophisticated — are more likely to overreact to news about stocks with lottery-like features. Consequently,
+stocks that are popular among retail investors should exhibit higher reversal profits.
+5.1. Evidence from amihud illiquidity measure
+At least since Campbell, Grossman, and Wang (1993), the literature has recognized that liquidity provision plays an important
+role in contributing to short-term reversals in stock returns. Is it true that our main results are mainly driven by the liquidity effect?
+To fully address this question, in Table 5, we formally test this alternative hypothesis. We introduce triple sorts (3 by 5 by 5)
+formed each week from July 1963 to December 2022 by sequentially sorting stocks based on the Amihud illiquidity measure (at
+week 𝑡 − 1), maximum daily return (MAX, at week 𝑡 − 2), and weekly stock returns (PRET, at week 𝑡 − 1). Panel A presents the results
+for equal-weighted portfolios, while Panel B reports the results for value-weighted portfolios. Within each panel, we further analyze
+the results based on different levels of illiquidity: high, middle, and low.
+Consistent with previous research such as Campbell, Grossman, and Wang (1993) and Nagel (2012), our findings demonstrate
+that stocks with higher levels of illiquidity (or equivalently lower liquidity) exhibit more pronounced short-term reversals due to
+their inherent high volatility. Moreover, Table 5 reveals that highly illiquid stocks with high MAX values that were also previous
+winners display the lowest returns in the following week for both equal-weighted and value-weighted portfolios, and vice versa for
+high-MAX past loser stocks.
+Importantly, we report that the short-term reversal strategy works well regardless of stock liquidity. For example, the mean
+differences in short-term reversal portfolio returns across high-MAX vs low-MAX stocks are highly significant even among stocks
+with low illiquidity (high liquidity). This conclusion holds for both equal-weighted and value-weighted portfolios. We also notice
+that when comparing the average returns of short-term reversal portfolios side by side across the two panels, the mean returns of
+various illiquidity portfolios are remarkably consistent regardless of the benchmark models used. Taken together, we conclude that
+while liquidity provision does seem to contribute to the overall profitability of short-term reversal strategies, it cannot explain the
+significant differences in average returns between high-MAX and low-MAX short-term reversal portfolios. Therefore we conclude
+that our main findings cannot be explained by the liquidity effect.
+Some readers might be concerned that due to illiquidity, it is possible that our findings could be artificially inflated by market
+microstructural biases. Later, in Table 11, we provide additional robustness checks to alleviate this concern.
+5.2. Evidence from share turnover
+To verify that the results in Table 5 are not specifically related to the Amihud illiquidity measure, we replicate the analysis in
+Table 6 using share turnover instead. Share turnover is an alternative, widely-used proxy for stock liquidity, and this comparison
+helps ensure that our findings are not an artifact of the Amihud illiquidity measure.
+The results in Table 6 align closely with those in Table 5, reinforcing our findings. Specifically, weekly reversal strategies applied
+to high-MAX stocks consistently outperform those applied to low-MAX stocks, regardless of turnover levels. For instance, when
+turnover is high, the equal-weighted high-MAX (low-MAX) reversal portfolio generates a highly significant average weekly excess
+return of 1.56% (1.07%). The differential between high-MAX and low-MAX returns is 0.49% per week, with a 𝑡-statistic of 6.79.
+Similarly, when turnover is low, the high-MAX minus low-MAX return differential remains highly significant at 1.27% per week.
+Results from value-weighted portfolios exhibit the same pattern. Thus, while share turnover may partially account for variations in
+average returns across reversal portfolios, it does not explain the performance differences between high-MAX and low-MAX reversal
+portfolios.
+We also perform a similar analysis using a third measure of stock liquidity — the bid–ask spread. Details of this analysis are
+provided in the appendix (Table A1). Our findings remain consistent across different liquidity measures, reinforcing the robustness
+of our results.
+5.3. The size effect
+The differences in average returns between value-weighted and equal-weighted portfolios from Table 2 suggests that firm size
+plays an important role. Therefore, in Table 7 we extend our analysis by explicitly investigating the influence of size (represented
+by market cap) on reversal excess returns. We employ a triple sort approach (3 by 5 by 5) every week from July 1963 to December
+2022. This involves sequentially sorting stocks based on three factors: stock market capitalization (SIZE) at week 𝑡 − 1, maximum
+daily return (MAX) at week 𝑡 − 2, and weekly return (PRET) at week 𝑡 − 1. By conducting this triple sort analysis, we aim to gain
+further insights into the reversal effect by considering the interaction between market capitalization, maximum daily returns, and
+past 1-month returns. These findings contribute to the existing literature on the reversal anomaly and shed light on the differential
+impact of these factors across different market capitalization categories.
+Panel A of Table 7 presents the results for equal-weighted portfolios, while Panel B of the same table reports the results for
+value-weighted portfolios. Within each panel, we further analyze the results based on different market capitalization categories:
+large, middle, and small. We report the average weekly excess returns and alphas based on various factor models.
+10
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 5
+Returns and alphas of triple-sorted portfolios (Illiquidity × MAX × PRET).
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.12
+(1.52)
+−0.12
+(−1.89)
+0.23
+(4.83)
+
+−0.26
+(−3.41)
+−0.04
+(−0.75)
+−0.21
+(−4.77)
+
+−0.49
+(−5.93)
+−0.11
+(−1.78)
+−0.38
+(−7.68)
+
+−1.30
+(−14.40
+−0.63
+(−7.84)
+−0.67
+(−12.12
+
+2.51
+(28.13)
+1.06
+(15.99)
+1.45
+(16.38)
+
+2.51
+(27.73)
+1.05
+(15.52)
+1.46
+(16.14)
+
+2.53
+(27.71)
+1.06
+(15.68)
+1.47
+(16.13)
+
+2.56
+(26.09)
+1.03
+(14.79)
+1.53
+(16.05)
+
+0.16
+(2.04)
+0.18
+(3.46)
+−0.01
+(−0.31)
+
+0.02
+(0.23)
+0.16
+(3.06)
+−0.14
+(−3.29)
+
+−0.12
+(−1.55)
+0.23
+(4.26)
+−0.35
+(−7.63)
+
+−0.46
+(−5.35)
+0.01
+(0.17)
+−0.47
+(−9.47)
+
+1.17
+(16.08)
+0.64
+(14.31)
+0.53
+(8.63)
+
+1.15
+(15.62)
+0.60
+(13.08)
+0.55
+(8.60)
+
+1.17
+(15.79)
+0.62
+(13.35)
+0.55
+(8.40)
+
+1.16
+(14.45)
+0.61
+(12.37)
+0.56
+(7.88)
+
+0.25
+(3.71)
+0.23
+(5.25)
+0.02
+(0.49)
+
+0.12
+(1.82)
+0.19
+(4.57)
+−0.07
+(−1.69)
+
+0.00
+(0.02)
+0.18
+(4.06)
+−0.18
+(−4.57)
+
+−0.25
+(−3.62)
+0.07
+(1.39)
+−0.32
+(−7.44)
+
+0.76
+(13.90)
+0.39
+(10.91)
+0.37
+(8.18)
+
+0.74
+(13.71)
+0.37
+(10.58)
+0.37
+(7.93)
+
+0.79
+(14.33)
+0.39
+(10.67)
+0.40
+(8.25)
+
+0.78
+(13.31)
+0.38
+(9.94)
+0.41
+(8.10)
+
+0.14
+(1.94)
+−0.02
+(−0.40)
+0.16
+(3.20)
+
+−0.27
+(−3.90)
+0.00
+(0.00)
+−0.27
+(−5.96)
+
+−0.50
+(−6.34)
+−0.07
+(−1.18)
+−0.43
+(−8.64)
+
+−1.18
+(−13.42
+−0.44
+(−6.51)
+−0.74
+(−12.22
+
+2.28
+(25.99)
+0.88
+(14.89)
+1.40
+(16.03)
+
+2.28
+(25.80)
+0.86
+(14.07)
+1.42
+(15.93)
+
+2.32
+(25.75)
+0.87
+(13.85)
+1.44
+(15.84)
+
+2.33
+(24.02)
+0.84
+(12.98)
+1.49
+(15.31)
+
+0.15
+(2.06)
+0.16
+(3.26)
+−0.01
+(−0.17)
+
+0.02
+(0.35)
+0.13
+(2.74)
+−0.11
+(−2.54)
+
+−0.13
+(−1.79)
+0.20
+(4.08)
+−0.32
+(−7.40)
+
+−0.45
+(−5.67)
+0.04
+(0.72)
+−0.49
+(−9.95)
+
+1.09
+(15.49)
+0.48
+(11.33)
+0.61
+(9.80)
+
+1.07
+(15.14)
+0.44
+(10.24)
+0.63
+(9.90)
+
+1.10
+(15.38)
+0.47
+(10.49)
+0.63
+(9.78)
+
+1.08
+(14.13)
+0.45
+(9.78)
+0.63
+(9.07)
+
+0.25
+(3.97)
+0.21
+(4.99)
+0.05
+(0.96)
+
+0.11
+(1.84)
+0.15
+(3.95)
+−0.04
+(−0.93)
+
+−0.07
+(−1.30)
+0.11
+(2.58)
+−0.18
+(−3.89)
+
+−0.28
+(−4.47)
+0.01
+(0.32)
+−0.29
+(−6.06)
+
+0.79
+(13.24)
+0.42
+(9.97)
+0.36
+(6.54)
+
+0.77
+(13.22)
+0.41
+(10.06)
+0.36
+(6.30)
+
+0.80
+(13.62)
+0.40
+(9.47)
+0.39
+(6.97)
+
+0.80
+(12.55)
+0.40
+(9.19)
+0.40
+(6.68)
+
+Panel A: Equal-weighted portfolios
+Panel A.1: High illiquidity
+High
+Low
+Hi.-Lo.
+
+1.21
+(14.05)
+0.43
+(4.98)
+0.78
+(10.49)
+
+Panel A.2: Middle illiquidity
+High
+Low
+Hi.-Lo.
+
+0.71
+(8.03)
+0.65
+(10.39)
+0.07
+(1.28)
+
+Panel A.3: Low illiquidity
+High
+Low
+Hi.-Lo.
+
+0.51
+(6.30)
+0.46
+(8.41)
+0.05
+(1.06)
+
+Panel B: Value-weighted portfolios
+Panel B.1: High illiquidity
+High
+Low
+Hi.-Lo.
+
+1.11
+(13.42)
+0.44
+(6.09)
+0.67
+(9.46)
+
+Panel B.2: Middle illiquidity
+High
+Low
+Hi.-Lo.
+
+0.64
+(7.58)
+0.52
+(8.95)
+0.12
+(2.25)
+
+Panel B.3: Low illiquidity
+High
+Low
+Hi.-Lo.
+
+0.51
+(6.81)
+0.43
+(8.86)
+0.08
+(1.38)
+
+Triple sorts (3 × 5 × 5) are formed every week from July 1963 to December 2022 by sequentially sorting stocks on the lagged Amihud illiquidity measure
+(Illiquidity, at week 𝑡 − 1), the maximum daily return (MAX, at week 𝑡 − 2), and past weekly return (PRET, at week 𝑡 − 1). The Amihud Illiquidity measure is
+estimated over 4 weeks (weeks 𝑡 − 1 to 𝑡 − 4). Panels A and B report average weekly returns from week 𝑡 for equal-weighted and value-weighted portfolios,
+respectively. Panels A.1, A.2, and A.3 (Panels B.1, B.2, and B.3) report the results conditional on stocks with high, middle, and low illiquidity, respectively.
+The table also reports the average weekly excess returns and alphas, which are calculated based on the four-factor Fama–French–Carhart model (FF4), six-factor
+Fama–French-UMD model (FF6), and Hou, Xue, and Zhang’s (2015) Q-factor model. Average excess returns and alphas are reported in percentage terms.
+Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+Consistent with previous literature, our findings indicate that the weekly reversal effect is more pronounced in small market
+capitalization stocks. For example, among high-MAX small-cap stocks, the equal-weighted short-term reversal strategy earns an
+average weekly return of 2.45%, which dwarfs the average return of 0.72% earned by the same strategy implemented on high-MAX
+large-cap stocks. However, we also find that regardless of firm size or portfolio weighting scheme, our main findings remain intact.
+Specifically, the MAX-enhanced short-term reversal strategies perform well in all six categories as shown in both Panels A and B of
+Table 7.
+Overall, the evidence presented in Tables 5, 7, and 8 supports the overreaction hypothesis. Our findings indicate that reversal
+strategies yield higher returns for illiquid and small stocks. However, neither stock liquidity nor size alone can account for the
+11
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 6
+Lagged-gross-return-weighted returns of double sorts on MAX and PRET.
+MAX
+
+High
+4
+3
+2
+Low
+
+PRET
+
+Losers minus Winners
+
+Losers
+
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.85
+(10.56)
+0.71
+(10.02)
+0.59
+(9.81)
+0.51
+(9.18)
+0.41
+(6.93)
+
+0.15
+(2.10)
+0.23
+(3.83)
+0.22
+(4.23)
+0.18
+(3.93)
+0.10
+(2.20)
+
+−0.06
+(−0.92)
+0.10
+(1.82)
+0.15
+(2.94)
+0.19
+(4.05)
+0.09
+(1.95)
+
+−0.22
+(−3.14)
+0.02
+(0.33)
+0.11
+(2.20)
+0.18
+(3.86)
+0.11
+(2.17)
+
+−0.82
+(−10.18)
+−0.33
+(−5.24)
+−0.14
+(−2.48)
+−0.01
+(−0.26)
+−0.24
+(−3.95)
+
+1.68
+(25.24)
+1.04
+(22.38)
+0.74
+(19.90)
+0.52
+(17.16)
+0.65
+(16.56)
+
+1.67
+(24.79)
+1.02
+(22.45)
+0.72
+(19.54)
+0.50
+(16.69)
+0.63
+(15.76)
+
+1.69
+(24.79)
+1.03
+(22.50)
+0.73
+(19.34)
+0.51
+(16.26)
+0.65
+(15.77)
+
+1.71
+(22.97)
+1.03
+(21.44)
+0.73
+(18.57)
+0.49
+(15.60)
+0.63
+(14.74)
+
+Double-sort portfolios (5 by 5) are formed each week from July 1963 to December 2022 by sequentially sorting stocks on the maximum daily return (MAX,
+at week 𝑡 − 2) and past week return (PRET, at week t-1). The portfolios are lagged-gross-return-weighted. The table reports the average weekly excess returns
+and alphas, which are calculated based on the four-factor Fama–French–Carhart, six-factor Fama–French-UMD, and q-factor models, respectively. Average excess
+returns and alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+performance differences between high-MAX and low-MAX reversal portfolios. These results collectively reinforce the overreaction
+hypothesis, suggesting that investors overreact to news about lottery-like stocks, with these overreactions being particularly
+pronounced among illiquid and small firms.
+5.4. Evidence from retail trading
+It is reasonable to hypothesize that investors who pursue stocks with lottery-like payoffs are likely retail investors. This hypothesis
+stems from the fact that individual investors, unlike institutional investors, often lack sophistication and are more prone to
+psychological biases. For instance, Barber and Odean (2001) have shown that retail investors from a large U.S. discount brokerage
+exhibit behavioral biases such as overconfidence. These investors tend to chase stocks that capture attention, resulting in significant
+underperformance compared to the market due to excessive trading.
+Grinblatt and Keloharju (2009) further analyze data from Finland and find that Finnish retail investors who engage in frequent
+trading are motivated by overconfidence and a desire for excitement. Similarly, Barber et al. (2022) observe that retail clients of
+the online broker Robinhood are influenced by attention-driven trading behaviors.
+In Table 8, we present a triple-sorted portfolio analysis based on retail order imbalance, MAX, and past weekly returns. We adopt
+the methodology of Boehmer et al. (2021) to track retail orders. Their approach classifies a trade as initiated by retail investors if it is
+an off-exchange market order with a subpenny component in the execution price. The retail imbalance is calculated by aggregating
+both buy and sell order imbalances using data from the TAQ database, covering the period from January 2010 to December 2019.
+Our findings reveal that the MAX-enhanced reversal strategy is effective only when retail order imbalance is in the highest quintile.
+Specifically, the high-MAX minus low-MAX reversal strategy yields statistically significant average returns exclusively in high retail
+imbalance scenarios. In contrast, average returns are not significant in other conditions, a pattern observed consistently across both
+value-weighted and equal-weighted portfolios. We conclude the overall evidence from retail trading activities in Table 8 is consistent
+with view that retail investors tend to chase stocks with lottery-like characteristics, aligning with the overreaction hypothesis.
+6. Robustness tests
+In this section, we explore several alternative hypotheses and conduct a series of additional robustness tests. Specifically, we
+examine alternative hypotheses related to investors’ reference-dependent preferences and investor sentiment. Additionally, we
+assess the robustness of our findings by addressing market microstructure noise and present results based on residual returns and
+Fama–MacBeth (1973) cross-sectional regressions.
+6.1. Reference dependent preferences
+Grinblatt and Han (2005) show that a stocks’ capital-gains-overhang (CGO), a turnover-weighted average of past prices,
+can predict medium-run momentum behavior. An et al. (2020) provide interesting evidence that lottery-like stocks significantly
+underperform non-lottery-like stocks when investors have lost money as indicated by a low CGO, and vice versa when investors
+have large gains in the stock. For example, in their Table 2, An et al. (2020) report that among the lowest quintile CGO stocks,
+the high-MAX minus low-MAX return spread is −1.38% (𝑡-statistic = −5.35) per month. In contrast, among the highest quintile CGO
+stocks, the high-MAX minus low-MAX return spread is 0.54% (𝑡-statistic = 2.30) per month. Therefore, An et al. (2020) concludes
+that anomalies associated with lottery-like stocks are reference-dependent — investors are driven by the desire to break-even on
+stocks they have paper losses. In fact, their aversion to loss realization is so strong that investors would double down on their losses
+and hope that their gamble will pay off.
+12
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 7
+Returns and alphas of triple-sorted portfolios (Turnover × MAX × PRET).
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.21
+(2.40)
+0.36
+(5.75)
+−0.14
+(−2.83)
+
+0.06
+(0.70)
+0.28
+(4.69)
+−0.22
+(−4.71)
+
+−0.12
+(−1.42)
+0.19
+(3.14)
+−0.31
+(−6.26)
+
+−0.70
+(−7.55)
+−0.13
+(−1.76)
+−0.56
+(−10.66
+
+1.56
+(17.63)
+1.07
+(16.79)
+0.49
+(6.79)
+
+1.56
+(17.49)
+1.04
+(16.37)
+0.51
+(6.98)
+
+1.59
+(17.66)
+1.07
+(16.68)
+0.52
+(6.84)
+
+1.61
+(16.53)
+1.02
+(15.28)
+0.59
+(7.46)
+
+0.21
+(3.05)
+0.23
+(4.51)
+−0.01
+(−0.33)
+
+−0.01
+(−0.13)
+0.17
+(3.51)
+−0.18
+(−4.83)
+
+−0.16
+(−2.19)
+0.22
+(4.28)
+−0.38
+(−8.80)
+
+−0.68
+(−8.32)
+−0.10
+(−1.68)
+−0.57
+(−12.27
+
+1.70
+(22.10)
+0.75
+(16.18)
+0.95
+(14.13)
+
+1.69
+(21.65)
+0.73
+(15.24)
+0.96
+(14.05)
+
+1.72
+(21.97)
+0.74
+(15.12)
+0.98
+(14.01)
+
+1.74
+(20.59)
+0.71
+(13.99)
+1.03
+(13.94)
+
+−0.01
+(−0.16)
+−0.16
+(−3.22)
+0.15
+(4.42)
+
+−0.21
+(−3.45)
+−0.10
+(−2.06)
+−0.12
+(−3.58)
+
+−0.42
+(−6.80)
+−0.07
+(−1.41)
+−0.35
+(−10.73
+
+−0.97
+(−12.97
+−0.48
+(−7.80)
+−0.49
+(−12.47
+
+1.72
+(29.22)
+0.45
+(8.95)
+1.27
+(19.30)
+
+1.72
+(28.92)
+0.44
+(8.76)
+1.27
+(19.14)
+
+1.73
+(28.93)
+0.45
+(8.75)
+1.28
+(19.00)
+
+1.79
+(28.38)
+0.46
+(8.46)
+1.33
+(18.79)
+
+0.30
+(3.44)
+0.31
+(5.35)
+−0.00
+(−0.06)
+
+0.16
+(2.05)
+0.20
+(3.78)
+−0.04
+(−0.61)
+
+−0.07
+(−0.86)
+0.14
+(2.68)
+−0.21
+(−3.77)
+
+−0.50
+(−5.83)
+−0.05
+(−0.81)
+−0.45
+(−6.71)
+
+1.25
+(13.11)
+0.66
+(10.84)
+0.59
+(6.55)
+
+1.25
+(13.15)
+0.64
+(10.80)
+0.60
+(6.57)
+
+1.28
+(13.66)
+0.66
+(10.75)
+0.62
+(6.79)
+
+1.32
+(13.00)
+0.59
+(9.45)
+0.72
+(7.75)
+
+0.35
+(5.45)
+0.28
+(6.33)
+0.07
+(1.50)
+
+0.08
+(1.37)
+0.19
+(4.32)
+−0.11
+(−2.37)
+
+−0.09
+(−1.39)
+0.16
+(3.61)
+−0.25
+(−5.23)
+
+−0.38
+(−5.56)
+0.00
+(0.06)
+−0.39
+(−6.66)
+
+1.08
+(13.88)
+0.53
+(11.09)
+0.55
+(6.91)
+
+1.07
+(13.83)
+0.52
+(10.78)
+0.55
+(6.87)
+
+1.10
+(13.96)
+0.51
+(10.49)
+0.58
+(7.19)
+
+1.12
+(13.45)
+0.49
+(9.68)
+0.63
+(7.39)
+
+0.12
+(2.07)
+0.10
+(2.12)
+0.03
+(0.52)
+
+−0.03
+(−0.64)
+0.06
+(1.54)
+−0.10
+(−2.18)
+
+−0.18
+(−3.19)
+0.10
+(2.40)
+−0.27
+(−5.85)
+
+−0.66
+(−10.65
+−0.08
+(−1.64)
+−0.58
+(−11.52
+
+1.29
+(18.34)
+0.41
+(7.55)
+0.88
+(10.88)
+
+1.27
+(17.99)
+0.39
+(7.02)
+0.88
+(10.90)
+
+1.28
+(17.87)
+0.39
+(7.01)
+0.89
+(10.90)
+
+1.32
+(17.49)
+0.39
+(6.77)
+0.93
+(10.72)
+
+Panel A: Equal-weighted portfolios
+Panel A.1: High turnover
+High
+Low
+Hi.-Lo.
+
+0.86
+(8.86)
+0.94
+(12.05)
+−0.07
+(−1.26)
+
+Panel A.2: Middle turnover
+High
+Low
+Hi.-Lo.
+
+1.02
+(11.93)
+0.65
+(10.94)
+0.38
+(7.00)
+
+Panel A.3: Low turnover
+High
+Low
+Hi.-Lo.
+
+0.75
+(10.62)
+−0.03
+(−0.42)
+0.78
+(14.15)
+
+Panel B: Value-weighted portfolios
+Panel B.1: High turnover
+High
+Low
+Hi.-Lo.
+
+0.75
+(7.40)
+0.61
+(8.50)
+0.13
+(1.80)
+
+Panel B.2: Middle turnover
+High
+Low
+Hi.-Lo.
+
+0.70
+(8.69)
+0.53
+(10.59)
+0.16
+(2.54)
+
+Panel B.3: Low turnover
+High
+Low
+Hi.-Lo.
+
+0.63
+(9.00)
+0.33
+(5.88)
+0.30
+(4.74)
+
+Triple sorts (3 × 5 × 5) are formed every week from July 1963 to December 2022 by sequentially sorting stocks on the lagged share turnover (Turnover, at
+week 𝑡 − 1), the maximum daily return (MAX, at week 𝑡 − 2), and past weekly return (PRET, at week 𝑡 − 1). Turnover is estimated over 4 weeks (weeks 𝑡 − 1 to
+𝑡 − 4). Panels A and B report average weekly returns from week 𝑡 for equal-weighted and value-weighted portfolios, respectively. Panels A.1, A.2, and A.3 (Panels
+B.1, B.2, and B.3) report the results conditional on stocks with high, middle, and low turnover, respectively. The table also reports the average weekly excess
+returns and alphas, which are calculated based on the four-factor Fama–French–Carhart model (FF4), six-factor Fama–French-UMD model (FF6), and Hou, Xue,
+and Zhang’s (2015) Q-factor model. Average excess returns and alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with
+automatic lag selection are reported in parentheses.
+
+Is it possible that our baseline results are due to An et al.’s reference-dependent preferences explanation? To investigate this
+possibility, in Table 9 we run a portfolio analysis by triple-sorting stocks on CGO (at week 𝑡 − 1), MAX (at week 𝑡 − 2), and past
+1-week returns (at week 𝑡 − 1). In panels A and B of this table, we report results based on equal-weighted and value-weighted
+portfolios, respectively.
+Panel A shows the results from equal-weighted weekly portfolios. We find that in this case our baseline results remain intact, and
+is complementary to An et al.’s (2020) reference-dependent preferences hypothesis. For instance, among low-CGO stocks, high-MAX
+past short-term losers (winners) earn an average weekly return of 0.92% (−1.32%), leading to a highly significant short-term reversal
+profit of 2.24% per week. However, the same reversal strategy implemented on low-CGO/low-MAX stocks only earns an average
+13
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 8
+Returns and alphas of triple-sorted portfolios (SIZE × MAX × PRET).
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.10
+(1.63)
+0.17
+(4.29)
+−0.08
+(−2.10)
+
+−0.01
+(−0.18)
+0.16
+(3.76)
+−0.17
+(−4.68)
+
+−0.27
+(−4.30)
+0.06
+(1.29)
+−0.33
+(−8.58)
+
+0.72
+(14.82)
+0.35
+(11.01)
+0.36
+(9.03)
+
+0.70
+(14.89)
+0.34
+(10.62)
+0.36
+(8.91)
+
+0.73
+(14.91)
+0.35
+(10.42)
+0.38
+(9.05)
+
+0.73
+(14.28)
+0.34
+(9.83)
+0.39
+(9.05)
+
+−0.01
+(−0.20)
+0.16
+(2.98)
+−0.17
+(−4.27)
+
+−0.15
+(−2.05)
+0.20
+(3.69)
+−0.35
+(−8.31)
+
+−0.50
+(−6.13)
+−0.01
+(−0.18)
+−0.49
+(−10.57)
+
+1.16
+(17.43)
+0.57
+(12.63)
+0.59
+(10.39)
+
+1.14
+(16.95)
+0.53
+(11.62)
+0.62
+(10.33)
+
+1.17
+(17.24)
+0.56
+(11.90)
+0.61
+(10.11)
+
+1.18
+(16.03)
+0.54
+(11.03)
+0.64
+(9.97)
+
+−0.21
+(−2.60)
+−0.01
+(−0.13)
+−0.20
+(−4.26)
+
+−0.49
+(−5.76)
+−0.07
+(−1.02)
+−0.42
+(−8.43)
+
+−1.24
+(−12.88)
+−0.62
+(−7.53)
+−0.62
+(−10.98)
+
+2.45
+(25.65)
+1.18
+(17.38)
+1.27
+(13.88)
+
+2.43
+(25.28)
+1.15
+(16.79)
+1.28
+(13.87)
+
+2.46
+(25.38)
+1.17
+(17.05)
+1.29
+(13.95)
+
+2.48
+(23.74)
+1.14
+(16.01)
+1.34
+(13.66)
+
+0.08
+(1.32)
+0.15
+(3.87)
+−0.07
+(−1.62)
+
+−0.06
+(−1.14)
+0.11
+(2.69)
+−0.17
+(−3.90)
+
+−0.28
+(−4.75)
+0.02
+(0.51)
+−0.31
+(−6.80)
+
+0.73
+(13.44)
+0.40
+(9.83)
+0.33
+(6.54)
+
+0.72
+(13.60)
+0.39
+(9.85)
+0.33
+(6.28)
+
+0.74
+(13.94)
+0.39
+(9.36)
+0.36
+(7.02)
+
+0.74
+(12.81)
+0.38
+(8.94)
+0.37
+(6.80)
+
+0.01
+(0.16)
+0.17
+(3.33)
+−0.16
+(−3.91)
+
+−0.12
+(−1.72)
+0.22
+(4.16)
+−0.34
+(−8.02)
+
+−0.45
+(−5.55)
+0.03
+(0.51)
+−0.48
+(−9.94)
+
+1.10
+(15.87)
+0.51
+(11.37)
+0.59
+(9.75)
+
+1.07
+(15.43)
+0.47
+(10.40)
+0.60
+(9.71)
+
+1.11
+(15.81)
+0.50
+(10.73)
+0.60
+(9.55)
+
+1.12
+(14.78)
+0.48
+(9.95)
+0.63
+(9.52)
+
+−0.19
+(−2.28)
+0.06
+(0.99)
+−0.24
+(−4.80)
+
+−0.44
+(−5.32)
+−0.01
+(−0.11)
+−0.43
+(−8.64)
+
+−1.07
+(−10.67)
+−0.47
+(−6.38)
+−0.60
+(−9.84)
+
+2.20
+(22.25)
+1.13
+(18.24)
+1.07
+(11.64)
+
+2.18
+(21.96)
+1.10
+(17.34)
+1.08
+(11.71)
+
+2.21
+(22.07)
+1.12
+(17.20)
+1.09
+(11.71)
+
+2.22
+(20.54)
+1.10
+(16.21)
+1.13
+(11.43)
+
+Panel A: Equal-weighted portfolios
+Panel A.1: Large market capitalization
+High
+Low
+H.-L.
+
+0.44
+(6.02)
+0.41
+(8.04)
+0.03
+(0.64)
+
+0.22
+(3.58)
+0.21
+(5.11)
+0.00
+(0.10)
+
+Panel A.2: Middle market capitalization
+High
+Low
+H.-L.
+
+0.66
+(8.05)
+0.56
+(8.99)
+0.11
+(2.42)
+
+0.13
+(1.79)
+0.15
+(2.89)
+−0.01
+(−0.29)
+
+Panel A.3: Small market capitalization
+High
+Low
+H.-L.
+
+1.21
+(13.38)
+0.56
+(6.48)
+0.65
+(8.83)
+
+0.12
+(1.41)
+−0.05
+(−0.71)
+0.16
+(3.10)
+
+Panel B: Value-weighted portfolios
+Panel B.1: Large market capitalization
+High
+Low
+H.-L.
+
+0.45
+(6.31)
+0.42
+(8.71)
+0.03
+(0.52)
+
+0.23
+(3.75)
+0.21
+(5.14)
+0.02
+(0.42)
+
+Panel B.2: Middle market capitalization
+High
+Low
+H.-L.
+
+0.64
+(7.65)
+0.54
+(8.77)
+0.10
+(2.18)
+
+0.15
+(1.97)
+0.16
+(3.22)
+−0.01
+(−0.30)
+
+Panel B.3: Small market capitalization
+High
+Low
+H.-L.
+
+1.13
+(12.54)
+0.67
+(8.64)
+0.46
+(6.71)
+
+0.16
+(1.87)
+0.05
+(0.83)
+0.11
+(1.95)
+
+Triple sorts (3 × 5 × 5) are formed every week from July 1963 to December 2022 by sequentially sorting stocks on the stock market capitalization (SIZE, at week
+𝑡 − 1), the maximum daily return (MAX, at week 𝑡 − 2), and past weekly return (PRET, at week 𝑡 − 1). Panels A and B report average weekly returns from week 𝑡
+for equal-weighted and value-weighted portfolios, respectively. Panels A.1, A.2, and A.3 (Panels B.1, B.2, and B.3) report the results conditional on stocks with
+large, middle, and small market capitalization, respectively. The table also reports the average weekly excess returns and alphas, which are calculated based on
+the four-factor Fama–French–Carhart model (FF4), six-factor Fama–French-UMD model (FF6), and Hou, Xue, and Zhang’s (2015) Q-factor model. Average excess
+returns and alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+mean return of 1.05%. Thus, the reversal strategy still works better among high-MAX stocks than low-MAX stocks after controlling
+for CGO. In addition, among low-CGO stocks, high-MAX past short-term losers significantly outperform their low-MAX counterparts
+by a spread of 0.60% (𝑡-statistic = 9.12) per week. Similar results are also found among middle-CGO stocks. By comparison, among
+high-CGO stocks, the results are weakened with a short-term reversal profit of only 0.97% and the spread between high-MAX and
+low-MAX losers is reduced to 0.26% ((𝑡-statistic = 4.85)). To a lesser extent, we also find similar patterns with value-weighted
+weekly portfolios. For example, in Panel B of the same table, we find that the high-MAX (low-MAX) short-term reversal strategy
+earns an average weekly return of 1.62% (0.69%) among low-CGO stocks.
+Thus, we draw two conclusions from Table 9. First, our baseline results remain intact even after controlling for An et al.’s
+reference-dependent preferences hypothesis. This conclusion is robust across both equal-weighted and value-weighted portfolios.
+14
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 9
+Evidence from retail trading activities.
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.17
+(1.64)
+0.10
+(1.57)
+0.06
+(0.79)
+
+−0.05
+(−0.43)
+0.09
+(1.28)
+−0.14
+(−1.67)
+
+−0.17
+(−1.34)
+−0.00
+(−0.02)
+−0.17
+(−1.52)
+
+0.74
+(6.04)
+0.33
+(3.01)
+0.41
+(2.73)
+
+0.72
+(5.76)
+0.30
+(2.61)
+0.42
+(2.72)
+
+0.75
+(5.95)
+0.30
+(2.75)
+0.45
+(2.92)
+
+0.72
+(5.68)
+0.28
+(2.35)
+0.44
+(2.79)
+
+0.18
+(1.39)
+0.23
+(2.55)
+−0.05
+(−0.56)
+
+0.06
+(0.47)
+0.22
+(2.05)
+−0.16
+(−1.52)
+
+−0.02
+(−0.12)
+0.10
+(0.96)
+−0.12
+(−0.95)
+
+0.41
+(2.67)
+0.33
+(3.02)
+0.08
+(0.51)
+
+0.38
+(2.50)
+0.31
+(2.79)
+0.07
+(0.44)
+
+0.37
+(2.38)
+0.32
+(2.88)
+0.04
+(0.26)
+
+0.39
+(2.51)
+0.32
+(2.85)
+0.08
+(0.47)
+
+0.06
+(0.49)
+0.24
+(2.67)
+−0.18
+(−2.03)
+
+0.13
+(0.88)
+0.22
+(2.16)
+−0.09
+(−0.91)
+
+0.00
+(0.00)
+0.11
+(1.00)
+−0.11
+(−0.95)
+
+0.34
+(2.28)
+0.32
+(2.76)
+0.02
+(0.11)
+
+0.28
+(1.79)
+0.31
+(2.69)
+−0.03
+(−0.19)
+
+0.27
+(1.74)
+0.32
+(2.79)
+−0.05
+(−0.26)
+
+0.30
+(1.89)
+0.31
+(2.82)
+−0.01
+(−0.08)
+
+0.16
+(1.05)
+0.30
+(3.15)
+−0.15
+(−1.43)
+
+0.22
+(1.64)
+0.20
+(2.20)
+0.02
+(0.20)
+
+0.08
+(0.58)
+0.19
+(1.96)
+−0.10
+(−1.10)
+
+−0.02
+(−0.14)
+0.08
+(0.72)
+−0.11
+(−0.81)
+
+0.13
+(0.85)
+0.28
+(2.78)
+−0.16
+(−0.94)
+
+0.06
+(0.39)
+0.25
+(2.41)
+−0.19
+(−1.14)
+
+0.04
+(0.27)
+0.27
+(2.54)
+−0.23
+(−1.34)
+
+0.04
+(0.28)
+0.25
+(2.49)
+−0.21
+(−1.27)
+
+0.09
+(0.58)
+0.27
+(2.63)
+−0.18
+(−1.55)
+
+0.24
+(1.58)
+0.24
+(2.62)
+0.00
+(0.03)
+
+0.08
+(0.56)
+0.21
+(2.24)
+−0.13
+(−1.29)
+
+−0.18
+(−1.09)
+0.13
+(1.15)
+−0.31
+(−2.55)
+
+0.39
+(2.50)
+0.22
+(2.58)
+0.17
+(0.99)
+
+0.37
+(2.31)
+0.19
+(2.23)
+0.18
+(1.03)
+
+0.37
+(2.30)
+0.19
+(2.16)
+0.18
+(1.05)
+
+0.35
+(2.16)
+0.19
+(2.18)
+0.16
+(0.94)
+
+0.26
+(2.26)
+0.22
+(3.45)
+0.04
+(0.39)
+
+0.02
+(0.14)
+0.13
+(1.58)
+−0.11
+(−0.96)
+
+−0.16
+(−1.01)
+0.16
+(1.55)
+−0.32
+(−2.23)
+
+0.69
+(4.47)
+0.17
+(1.71)
+0.52
+(2.72)
+
+0.67
+(4.43)
+0.13
+(1.29)
+0.55
+(2.93)
+
+0.69
+(4.59)
+0.13
+(1.30)
+0.56
+(3.00)
+
+0.67
+(4.40)
+0.13
+(1.28)
+0.53
+(2.84)
+
+0.28
+(2.15)
+0.20
+(2.40)
+0.08
+(0.74)
+
+0.23
+(1.89)
+0.28
+(3.43)
+−0.04
+(−0.46)
+
+0.24
+(1.03)
+0.21
+(2.03)
+0.03
+(0.16)
+
+0.19
+(0.70)
+0.08
+(0.73)
+0.12
+(0.42)
+
+0.16
+(0.62)
+0.06
+(0.60)
+0.10
+(0.36)
+
+0.11
+(0.40)
+0.07
+(0.69)
+0.04
+(0.13)
+
+0.14
+(0.50)
+0.06
+(0.59)
+0.08
+(0.28)
+
+0.13
+(0.98)
+0.23
+(2.87)
+−0.10
+(−0.91)
+
+0.18
+(1.23)
+0.25
+(2.80)
+−0.07
+(−0.56)
+
+0.13
+(0.81)
+0.16
+(1.58)
+−0.03
+(−0.21)
+
+0.03
+(0.17)
+0.05
+(0.44)
+−0.02
+(−0.09)
+
+−0.02
+(−0.10)
+0.00
+(0.00)
+−0.02
+(−0.09)
+
+−0.02
+(−0.09)
+0.02
+(0.15)
+−0.03
+(−0.16)
+
+−0.03
+(−0.17)
+0.02
+(0.15)
+−0.05
+(−0.23)
+
+Panel A: Equal-weighted portfolios
+Panel A.1: High retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.57
+(4.35)
+0.33
+(3.33)
+0.24
+(2.14)
+
+0.32
+(3.05)
+0.15
+(1.88)
+0.17
+(2.10)
+
+Panel A.2: 4th Quintile retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.39
+(2.40)
+0.43
+(3.34)
+−0.04
+(−0.31)
+
+0.34
+(2.54)
+0.28
+(2.98)
+0.06
+(0.68)
+
+Panel A.3: 3rd quintile retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.34
+(1.86)
+0.43
+(3.23)
+−0.09
+(−0.62)
+
+0.32
+(2.21)
+0.22
+(2.40)
+0.10
+(0.89)
+
+Panel A.4: 2nd quintile retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.10
+(0.54)
+0.37
+(2.79)
+−0.26
+(−1.97)
+
+Panel A.5: Low retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.21
+(1.21)
+0.35
+(2.91)
+−0.14
+(−1.05)
+
+Panel B: Value-weighted portfolios
+Panel B.1: High retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.53
+(3.69)
+0.33
+(3.06)
+0.20
+(1.61)
+
+0.37
+(3.02)
+0.15
+(1.95)
+0.23
+(2.09)
+
+Panel B.2: 4th quintile retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.43
+(1.91)
+0.28
+(2.42)
+0.15
+(0.69)
+
+0.44
+(3.22)
+0.26
+(2.73)
+0.18
+(1.59)
+
+Panel B.3: 3rd quintile retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.16
+(0.87)
+0.21
+(1.78)
+−0.05
+(−0.30)
+
+0.37
+(2.59)
+0.31
+(3.21)
+0.06
+(0.49)
+
+(continued on next page)
+
+15
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 9 (continued).
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+0.33
+(2.22)
+0.20
+(2.16)
+0.13
+(1.02)
+
+0.31
+(2.16)
+0.23
+(2.62)
+0.09
+(0.69)
+
+0.18
+(1.29)
+0.20
+(2.40)
+−0.02
+(−0.21)
+
+0.18
+(1.16)
+0.18
+(1.74)
+0.01
+(0.05)
+
+−0.03
+(−0.19)
+0.14
+(1.31)
+−0.17
+(−0.90)
+
+−0.13
+(−0.78)
+0.10
+(0.92)
+−0.23
+(−1.23)
+
+−0.13
+(−0.75)
+0.10
+(0.97)
+−0.23
+(−1.25)
+
+−0.12
+(−0.70)
+0.09
+(0.89)
+−0.21
+(−1.13)
+
+0.20
+(1.15)
+0.31
+(3.14)
+−0.11
+(−0.80)
+
+0.26
+(1.84)
+0.21
+(2.30)
+0.06
+(0.48)
+
+0.22
+(1.58)
+0.33
+(3.65)
+−0.10
+(−0.98)
+
+−0.04
+(−0.26)
+0.21
+(2.06)
+−0.26
+(−1.89)
+
+0.21
+(1.14)
+0.03
+(0.27)
+0.19
+(0.93)
+
+0.17
+(0.88)
+−0.02
+(−0.20)
+0.19
+(0.90)
+
+0.18
+(0.94)
+−0.03
+(−0.29)
+0.21
+(1.00)
+
+0.14
+(0.70)
+−0.03
+(−0.28)
+0.17
+(0.78)
+
+Panel B.3: 2nd quintile retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.15
+(0.78)
+0.31
+(2.85)
+−0.16
+(−1.02)
+
+Panel B.3: Low retail imbalance
+High
+Low
+Hi.-Lo.
+
+0.17
+(0.86)
+0.24
+(2.10)
+−0.07
+(−0.41)
+
+Portfolios (5 by 5 by 5) are formed every week from January 2010 to December 2019 by sequentially sorting stocks on retail imbalance (at week 𝑡−1), maximum
+daily return (MAX, at week 𝑡 − 2), and past weekly return (PRET, at week 𝑡 − 1). Following Boehmer, Jones, Zhang and Zhang (2021), retail imbalance is defined
+as the absolute value of retail order imbalance over past 4 weeks (weeks t-1 to t-4). Panels A and B report equal-weighted and value-weighted portfolios,
+respectively. Panels A.1 to A.5 (Panels B.1 to B.5) report the results conditional on retail imbalance quintiles. The table reports the average weekly excess returns
+and alphas, which are calculated based on the four-factor Fama–French–Carhart, six-factor Fama–French-UMD, and q-factor models, respectively. Average excess
+returns and alphas are given in percentage terms. Newey–West (1987) adjusted 𝑡-statistics are reported in parentheses.
+
+Second, we find that our results are also complementary to An et al.’s (2020) finding. Specifically, our results are stronger among
+low-CGO stocks than high-CGO stocks.
+6.2. Investor sentiment
+Stambaugh et al. (2012) find that investor sentiment plays a key role in explaining a wide range of anomalies in cross-sectional
+stock returns. In this subsection, we propose to study the relation between investor sentiment and the MAX-enhance short-term
+reversal anomaly.
+Table 10 displays the returns of reversal portfolios based on double sorting (5 by 5) of the maximum daily return (MAX, at week
+𝑡 − 2) and the past weekly return (PRET, at week 𝑡 − 1), with the portfolios conditioned on investor sentiment levels. The investor
+sentiment index, derived from Baker and Wurgler (2006), is orthogonal to key macroeconomic variables. The results are presented
+for three levels of the investor sentiment index based on its value at week 𝑡 − 1.
+The evidence in Table 10 suggests that our main findings are not driven by shifts in investor sentiment. Notably, short-term
+reversal strategies perform better under both high and low sentiment conditions. For example, among value-weighted portfolios,
+when investor sentiment is high, the high-MAX (low-MAX) reversal portfolio yields an excess weekly return of 1.54% (0.56%).
+In contrast, when investor sentiment is low, the high-MAX (low-MAX) reversal portfolio achieves an excess weekly return of
+1.21% (0.55). In both scenarios, these strategies outperform those observed when sentiment is at a moderate level. This U-shaped
+relationship challenges the alternative hypothesis that investor sentiment is the main driver behind the effectiveness of the MAXrelated reversal strategy, as the strategy remains robust even during periods of low sentiment. Similar patterns are observed with
+equal-weighted portfolios. Overall, the results from Table 10 indicate that while the MAX-enhanced reversal effects are influenced
+by investor sentiment levels, the relationship is not monotonic but rather exhibits a U-shaped pattern.
+6.3. Accounting for market-microstructure noises
+Since our main results are more prominent among small-cap and illiquid firms, some readers might wonder how market
+microstructure noises induced by large bid–ask spread might have affected our results. To address this issue, we rely on the
+methodologies proposed by Blume and Stambaugh (1983) and Asparouhova et al. (2010). More specifically, these authors
+demonstrate that microstructure noises can introduce an upward bias in estimated average returns.
+To offset the effect from microstructure noises, Asparouhova, Bessembinder, and Kalcheva (2010) propose a methodology that
+computes portfolio returns weighted by the prior period observed gross (one-plus) returns. In Table 11, we present results following
+this methodological adjustment. We find that our baseline results from Table 2 remain valid after these methodological adjustments.
+For example, short-term reversals among high-MAX stocks are much more profitable than the same strategy implemented on lowMAX stocks (1.68% vs 0.65%). These results are intact after risk adjustments. In addition, the spreads between high-MAX and
+low-MAX stocks are quite large for both past short-term losers and past short-term winners. For example, the high-MAX past shortterm losers can earn a 0.85% average weekly return with a significant 𝑡-statistic of 10.56, which outstrips their low-MAX counterparts
+by a margin of 0.44% per week. Interestingly, we also find that the average weekly returns decrease (increase) monotonically for
+past short-term losers (winners) across the five MAX quintile portfolios. Therefore, we conclude that our main findings reported
+earlier are reaffirmed after controlling for market-microstructure noises.
+16
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 10
+Returns and alphas of triple sorts on CGO, MAX, and PRET.
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+−0.07
+(−0.98)
+−0.13
+(−2.75)
+0.06
+(1.41)
+
+−0.23
+(−3.57)
+−0.12
+(−2.55)
+−0.12
+(−3.08)
+
+−0.38
+(−5.81)
+−0.11
+(−2.18)
+−0.28
+(−7.14)
+
+−0.63
+(−8.30)
+−0.28
+(−5.06)
+−0.35
+(−7.59)
+
+0.97
+(15.94)
+0.36
+(8.86)
+0.61
+(9.65)
+
+0.99
+(15.30)
+0.37
+(8.78)
+0.62
+(9.55)
+
+0.98
+(15.34)
+0.37
+(8.63)
+0.61
+(9.28)
+
+0.99
+(14.45)
+0.36
+(8.13)
+0.62
+(9.12)
+
+−0.06
+(−1.01)
+−0.15
+(−3.05)
+0.09
+(2.52)
+
+−0.28
+(−4.54)
+−0.16
+(−3.29)
+−0.12
+(−3.68)
+
+−0.42
+(−6.79)
+−0.17
+(−3.72)
+−0.24
+(−7.19)
+
+−0.79
+(−11.15)
+−0.37
+(−6.73)
+−0.42
+(−9.72)
+
+1.26
+(21.32)
+0.45
+(10.33)
+0.80
+(14.30)
+
+1.26
+(20.79)
+0.47
+(10.22)
+0.79
+(13.68)
+
+1.27
+(20.96)
+0.47
+(10.69)
+0.80
+(13.54)
+
+1.26
+(19.23)
+0.48
+(10.14)
+0.78
+(12.18)
+
+−0.02
+(−0.28)
+−0.12
+(−1.85)
+0.10
+(1.89)
+
+−0.34
+(−4.24)
+−0.15
+(−2.23)
+−0.20
+(−4.23)
+
+−0.59
+(−6.89)
+−0.23
+(−3.58)
+−0.37
+(−7.77)
+
+−1.32
+(−13.77)
+−0.73
+(−9.22)
+−0.60
+(−11.16)
+
+2.24
+(24.52)
+1.05
+(15.81)
+1.19
+(14.48)
+
+2.24
+(22.67)
+1.06
+(14.95)
+1.18
+(13.74)
+
+2.24
+(22.47)
+1.06
+(15.13)
+1.19
+(13.58)
+
+2.25
+(20.96)
+1.05
+(13.98)
+1.20
+(12.60)
+
+0.01
+(0.08)
+−0.02
+(−0.50)
+0.03
+(0.48)
+
+−0.12
+(−1.85)
+−0.08
+(−1.88)
+−0.04
+(−0.77)
+
+−0.39
+(−6.03)
+−0.14
+(−2.94)
+−0.26
+(−4.74)
+
+−0.51
+(−7.05)
+−0.22
+(−4.26)
+−0.29
+(−5.13)
+
+0.80
+(10.68)
+0.36
+(7.52)
+0.44
+(5.51)
+
+0.81
+(10.39)
+0.39
+(7.45)
+0.42
+(5.16)
+
+0.79
+(9.70)
+0.38
+(7.74)
+0.41
+(4.81)
+
+0.78
+(8.90)
+0.37
+(6.96)
+0.41
+(4.59)
+
+0.03
+(0.44)
+−0.10
+(−2.01)
+0.13
+(2.57)
+
+−0.16
+(−2.49)
+−0.08
+(−1.75)
+−0.08
+(−1.60)
+
+−0.33
+(−5.15)
+−0.16
+(−3.45)
+−0.17
+(−3.15)
+
+−0.61
+(−9.36)
+−0.20
+(−3.94)
+−0.41
+(−7.29)
+
+0.97
+(12.44)
+0.42
+(7.52)
+0.55
+(6.72)
+
+0.97
+(12.17)
+0.41
+(6.67)
+0.56
+(6.38)
+
+0.99
+(12.24)
+0.41
+(6.89)
+0.57
+(6.66)
+
+0.96
+(11.36)
+0.39
+(5.99)
+0.58
+(6.39)
+
+0.09
+(0.98)
+0.02
+(0.29)
+0.07
+(0.93)
+
+−0.22
+(−2.60)
+−0.03
+(−0.44)
+−0.19
+(−2.92)
+
+−0.47
+(−5.45)
+−0.13
+(−2.14)
+−0.33
+(−5.04)
+
+−0.98
+(−10.20)
+−0.42
+(−5.86)
+−0.56
+(−7.76)
+
+1.62
+(13.99)
+0.93
+(11.02)
+0.69
+(6.14)
+
+1.65
+(12.75)
+0.93
+(9.47)
+0.72
+(5.62)
+
+1.63
+(12.71)
+0.92
+(10.55)
+0.71
+(5.62)
+
+1.62
+(11.53)
+0.90
+(8.86)
+0.72
+(5.32)
+
+Panel A: Equal-weighted portfolios
+Panel A.1: High CGO
+High
+Low
+H.-L.
+
+0.34
+(4.77)
+0.08
+(1.52)
+0.26
+(4.85)
+
+Panel A.2: Middle CGO
+High
+Low
+H.-L.
+
+0.47
+(7.11)
+0.08
+(1.47)
+0.39
+(9.09)
+
+Panel A.3: Low CGO
+High
+Low
+H.-L.
+
+0.92
+(9.89)
+0.32
+(4.01)
+0.60
+(9.12)
+
+Panel B: Value-weighted portfolios
+Panel B.1: High CGO
+High
+Low
+H.-L.
+
+0.29
+(3.81)
+0.14
+(2.76)
+0.15
+(2.35)
+
+Panel B.2: Middle CGO
+High
+Low
+H.-L.
+
+0.36
+(4.44)
+0.22
+(3.70)
+0.14
+(2.10)
+
+Panel B.3: Low CGO
+High
+Low
+H.-L.
+
+0.64
+(5.80)
+0.51
+(6.03)
+0.13
+(1.46)
+
+Triple sorts (3 × 5 × 5) are formed every week from July 1963 to December 2022 by sequentially sorting stocks on the capital gains overhang (CGO, at week
+𝑡 − 1), the maximum daily return (MAX, at week 𝑡 − 2), and past weekly return (PRET, at week 𝑡 − 1). Panels A and B report average weekly returns from week 𝑡
+for equal-weighted and value-weighted portfolios, respectively. Panels A.1, A.2, and A.3 (Panels B.1, B.2, and B.3) report the results conditional on stocks with
+high, middle, and low CGO, respectively. The table also reports the average weekly excess returns and alphas, which are calculated based on the four-factor
+Fama–French–Carhart model (FF4), six-factor Fama–French-UMD model (FF6), and Hou, Xue, and Zhang’s (2015) Q-factor model. Average excess returns and
+alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+6.4. Results based on residual returns
+
+Blitz et al. (2013) report that short-term strategies based on residual returns from the Fama–French three-factor model can
+significantly outperform the conventional reversal strategy. Therefore, it is interesting to see whether the MAX-enhanced reversal
+strategy is sensitive to the use of residual returns.
+In Table 12 we replicate the baseline weekly results using residual returns from the Fama–French three-factor model. Specifically,
+for each week 𝑡 in the sample from July 1963 to December 2022, we form double-sorted portfolios (5 by 5) by sequentially sorting
+stocks on their MAX values from week 𝑡 − 2 and their previous weekly residual returns (PRES) from week 𝑡 − 1. The residual returns
+17
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 11
+Returns and alphas of MAX-reversal portfolios conditional on investor sentiment.
+MAX
+
+Equal-weighted
+
+Value-weighted
+
+Ls
+
+Wn
+
+Ls minus Wn
+
+Ls
+
+Wn
+
+Ls minus Wn
+
+Excess
+
+Excess
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+Excess
+
+Excess
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+1.91
+(18.39)
+0.50
+(7.80)
+
+1.98
+(17.89)
+0.50
+(7.16)
+
+2.00
+(18.28)
+0.52
+(7.40)
+
+2.02
+(17.21)
+0.53
+(7.90)
+
+0.54
+(3.53)
+0.40
+(4.34)
+
+−1.00
+(−8.23)
+−0.16
+(−1.87)
+
+1.54
+(12.72)
+0.56
+(7.17)
+
+1.58
+(13.40)
+0.57
+(6.72)
+
+1.63
+(13.88)
+0.56
+(6.46)
+
+1.65
+(13.95)
+0.57
+(7.08)
+
+1.24
+(11.07)
+0.46
+(8.93)
+
+1.18
+(10.62)
+0.43
+(8.68)
+
+1.20
+(10.77)
+0.44
+(9.07)
+
+1.18
+(10.57)
+0.42
+(8.87)
+
+0.61
+(4.67)
+0.49
+(5.60)
+
+−0.12
+(−1.18)
+0.14
+(2.06)
+
+0.73
+(6.05)
+0.36
+(4.65)
+
+0.70
+(5.25)
+0.31
+(4.15)
+
+0.73
+(5.52)
+0.31
+(4.18)
+
+0.71
+(5.36)
+0.28
+(3.62)
+
+1.91
+(16.32)
+0.95
+(12.18)
+
+1.88
+(15.94)
+0.93
+(11.59)
+
+1.91
+(15.72)
+0.96
+(11.27)
+
+1.92
+(14.58)
+0.96
+(10.41)
+
+0.92
+(6.03)
+0.60
+(6.29)
+
+−0.29
+(−2.24)
+0.05
+(0.54)
+
+1.21
+(11.34)
+0.55
+(6.13)
+
+1.17
+(10.95)
+0.53
+(5.93)
+
+1.22
+(10.72)
+0.56
+(5.50)
+
+1.19
+(9.92)
+0.54
+(5.70)
+
+Panel A: High sentiment
+High
+Low
+
+0.65
+(4.73)
+0.08
+(0.81)
+
+−1.27
+(−9.53)
+−0.42
+(−3.84)
+
+Panel B: Middle sentiment
+High
+Low
+
+0.85
+(6.71)
+0.39
+(4.15)
+
+−0.39
+(−3.34)
+−0.07
+(−0.84)
+
+Panel C: Low sentiment
+High
+Low
+
+1.21
+(8.06)
+0.79
+(7.54)
+
+−0.70
+(−4.51)
+−0.17
+(−1.38)
+
+This table reports the returns of MAX-reversal portfolios conditional on investor sentiment. Portfolios are formed based on the sequentially double sorts (5 by
+5) on the maximum daily return (MAX, at week 𝑡 − 2) and past weekly return (PRET, at week 𝑡 − 1). MAX-Reversal portfolios are the high-low PRET portfolios
+conditional on MAX. We report the results of both equal-weighted and value-weighted portfolios. We use Baker and Wurgler’s (2006) sentiment index, which is
+orthogonal to a set of macroeconomic variables. The sample period ranges from July 1963 to June 2022. The table reports the average weekly excess returns
+and alphas, which are calculated based on the four-factor Fama–French–Carhart model (FF4), the six-factor Fama–French-UMD model (FF6), and Hou, Xue,
+and Zhang’s (2015) Q-factor model. Average excess returns and alphas are reported in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with
+automatic lag selection are reported in parentheses.
+
+Table 12
+Weekly returns and alphas of portfolios doubly sorted on MAX and Residual Return.
+MAX
+
+PRET
+Losers
+
+Losers minus Winners
+2
+
+3
+
+4
+
+Winners
+
+Excess
+
+𝛼𝐹 𝐹 4
+
+𝛼𝐹 𝐹 6
+
+𝛼𝑄
+
+−0.74
+(−9.91)
+−0.31
+(−5.30)
+−0.14
+(−2.63)
+−0.02
+(−0.49)
+−0.21
+(−3.83)
+
+1.63
+(27.66)
+1.04
+(26.14)
+0.74
+(22.57)
+0.54
+(20.66)
+0.73
+(22.19)
+
+1.62
+(27.07)
+1.03
+(25.62)
+0.73
+(22.11)
+0.53
+(20.10)
+0.72
+(21.38)
+
+1.63
+(26.83)
+1.03
+(25.57)
+0.74
+(22.00)
+0.53
+(19.80)
+0.73
+(21.44)
+
+1.64
+(25.06)
+1.03
+(24.37)
+0.73
+(20.78)
+0.52
+(18.71)
+0.72
+(20.01)
+
+−0.42
+(−6.60)
+−0.20
+(−3.84)
+−0.10
+(−2.28)
+−0.03
+(−0.79)
+0.02
+(0.38)
+
+0.93
+(17.84)
+0.64
+(14.88)
+0.48
+(13.22)
+0.36
+(11.90)
+0.37
+(10.59)
+
+0.92
+(17.39)
+0.63
+(14.86)
+0.47
+(12.69)
+0.36
+(11.69)
+0.36
+(9.97)
+
+0.93
+(17.53)
+0.64
+(15.02)
+0.47
+(12.80)
+0.35
+(11.67)
+0.35
+(9.90)
+
+0.92
+(16.25)
+0.63
+(13.91)
+0.48
+(12.44)
+0.34
+(10.61)
+0.35
+(9.27)
+
+Panel A: Double sorts on MAX and Past-Returns — equal-weighted
+High
+4
+3
+2
+Low
+
+0.88
+(12.24)
+0.73
+(11.66)
+0.60
+(11.28)
+0.51
+(10.61)
+0.52
+(10.20)
+
+0.22
+(2.99)
+0.28
+(4.57)
+0.30
+(5.37)
+0.24
+(4.93)
+0.15
+(2.90)
+
+−0.09
+(−1.18)
+0.10
+(1.63)
+0.16
+(2.82)
+0.19
+(3.83)
+0.07
+(1.33)
+
+−0.29
+(−3.77)
+−0.03
+(−0.49)
+0.05
+(0.89)
+0.14
+(2.94)
+−0.00
+(−0.09)
+
+Panel B: Double sorts on MAX and Past-Returns — value-weighted
+High
+4
+3
+2
+Low
+
+0.50
+(7.19)
+0.43
+(7.74)
+0.38
+(8.31)
+0.33
+(7.57)
+0.38
+(8.64)
+
+0.26
+(3.79)
+0.23
+(4.19)
+0.23
+(4.96)
+0.16
+(3.99)
+0.23
+(5.67)
+
+0.08
+(1.13)
+0.09
+(1.61)
+0.13
+(2.97)
+0.14
+(3.58)
+0.16
+(3.89)
+
+−0.09
+(−1.41)
+0.03
+(0.49)
+0.01
+(0.29)
+0.10
+(2.46)
+0.11
+(2.54)
+
+Double-sorted portfolios (5 by 5) are formed every week by sequentially sorting stocks on lagged values of their maximum daily return (MAX) from week 𝑡 − 2
+and then on their weekly residual returns (PRES) over the past week (i.e., week 𝑡 − 1). Residual returns are estimated from Fama–French 3-factor model each
+week. For each iteration in estimation, we use the stock returns in the rolling window from week 𝑡 − 52 to week 𝑡 − 1. Panels A and B report the average
+returns of equal-weighted and value-weighted portfolios from week 𝑡, respectively. The table also reports the average weekly excess returns and alphas, which
+are calculated based on the four-factor Fama–French–Carhart model (FF4), six-factor Fama–French–UMD model (FF6), and Hou, Xue, and Zhang’s (2015) Q-factor
+model. The sample period is from July 1963 to December 2022. Average excess returns and alphas are reported in percentage terms. Newey–West (1987, 1994)
+adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+18
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+Table 13
+Fama–MacBeth cross-sectional regressions.
+
+Intercept
+MAX ×
+MAX
+REV
+
+Monthly MAX and Monthly REV
+
+Weekly MAX and Weekly REV
+
+26-Week MAX and Weekly REV
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+(8)
+
+(9)
+
+1.12***
+(4.65)
+−0.08***
+(4.95)
+−0.21***
+(2.91)
+−0.45***
+(7.78)
+
+1.12***
+(4.66)
+−0.06***
+(3.78)
+−0.27***
+(4.83)
+−0.50***
+(8.97)
+
+1.12***
+(4.67)
+−0.06***
+(3.31)
+−0.24***
+(6.80)
+−0.53***
+(9.47)
+0.39***
+(7.29)
+0.03
+(1.10)
+−0.23***
+(4.32)
+0.20***
+(4.45)
+−0.29
+(1.55)
+0.07
+(0.34)
+0.10***
+(3.02)
+
+0.20***
+(3.67)
+−0.06***
+(13.30)
+−0.08***
+(6.83)
+−0.35***
+(22.65)
+
+0.20***
+(3.67)
+−0.06***
+(13.16)
+−0.02*
+(1.73)
+−0.22***
+(12.23)
+
+0.20***
+(3.67)
+−0.05***
+(11.44)
+−0.25***
+(15.91)
+−0.34***
+(16.15)
+0.07***
+(5.98)
+0.02
+(0.69)
+0.13***
+(12.57)
+0.02**
+(2.27)
+0.28***
+(4.19)
+0.34***
+(4.53)
+−0.39***
+(20.79)
+
+0.20***
+(3.62)
+−0.08***
+(15.29)
+−0.10***
+(5.13)
+−0.35***
+(22.82)
+
+0.20***
+(3.62)
+−0.07***
+(15.41)
+−0.08***
+(5.74)
+−0.21***
+(12.29)
+
+0.20***
+(3.62)
+−0.08***
+(18.11)
+−0.28***
+(30.46)
+−0.31***
+(15.82)
+0.10***
+(8.31)
+0.02
+(0.72)
+0.07***
+(6.57)
+0.02**
+(2.32)
+0.32***
+(4.77)
+0.30***
+(4.00)
+−0.37***
+(20.27)
+
+0.06
+
+0.01
+
+0.14
+
+0.02
+
+MOM
+BETA
+
+0.01
+(0.39)
+−0.13**
+(2.00)
+0.22***
+(4.15)
+
+SIZE
+BM
+IVOL
+TVOL
+ILLIQ
+Adj. 𝑅2
+
+0.02
+
+0.04
+
+0.06**
+(2.29)
+0.05***
+(2.67)
+−0.02
+(1.58)
+
+0.11
+
+0.07***
+(2.78)
+0.01
+(0.80)
+−0.02
+(1.58)
+
+0.11
+
+0.14
+
+Columns (1) to (3) report results where the dependent variable is the monthly stock return from month 𝑡. Columns (4) to (9) report results where the dependent
+variable is weekly stock return from week 𝑡. MAX is the maximum daily return within a month, week, or 26 weeks. We measure the Max at month/week 𝑡 − 2.
+REV is a stock’s past return from month/week 𝑡 − 1. MOM is the cumulative return from month 𝑡 − 2 to month 𝑡 − 12. BETA is the market beta. We follow
+Scholes and Williams (1977) and Dimson (1979) and use the lag and lead of the market portfolio as well as the current market when estimating beta. SIZE is
+the natural logarithm of the market capitalization. BM is the book-to-market ratio. TVOL and IVOL are total and idiosyncratic volatility, respectively. ILLIQ is
+Amihud (2002)’s illiquidity measure. Independent variables are standardized to a mean of 0 and a standard deviation of 1. The Dependent variable (i.e., stock
+return at month/week 𝑡) is measured in percentage terms. Newey–West (1987, 1994) adjusted 𝑡-statistics with automatic lag selection are reported in parentheses.
+
+are estimated using a 52-week rolling window from week 𝑡 − 52 to week 𝑡 − 1. Panels A and B report the results of equal-weighted
+and value-weighted portfolios, respectively. This table reports the average weekly excess returns and alphas from the factor models.
+The results in Table 12 confirm that the MAX-enhanced reversal strategy also works when residual returns are used. For example,
+based on equal-weighted (value-weighted) portfolios, the short-term reversal strategy implemented on high-MAX stocks earns a
+highly significant average weekly excess return of 1.63% (0.93%), which more than doubles the same strategy implemented on lowMAX stocks. Results based on alphas are almost identical. For instance, the monthly alphas for the high-MAX portfolios based on the
+q-factor model are 1.64% and 0.92% for equal- and value-weighted portfolios, respectively. Moreover, we find the familiar pattern
+where high-MAX past short-term losers earn significantly positive returns and outperform their low-MAX counterparts, whereas the
+high-MAX past short-term winners suffer from negative average returns and underperform their low-MAX counterparts. Therefore,
+we conclude that our main findings reported in Table 2 are robust and remain intact when using residual returns.
+6.5. Fama–MacBeth cross-sectional regressions
+To complement our main results from portfolio analysis, we further report results from estimating variations of the following
+Fama and MacBeth (1973) style cross-sectional regression model, which enables us to control for common characteristics that are
+known to have explanatory power in the cross-section of stock returns:
+𝑅𝑒𝑡𝑖,𝑡 = 𝛽0 + 𝛽1 𝑀𝐴𝑋𝑖,𝑡−2 × 𝑅𝑒𝑡𝑖,𝑡−1 + 𝛽2 𝑀𝐴𝑋𝑖,𝑡−2 + 𝛽3 𝑅𝑒𝑡𝑖,𝑡−1 + 𝛾 ′ 𝐶𝑂𝑁𝑇 𝑅𝑂𝐿𝑆𝑖,𝑡 + 𝜀𝑖,𝑡 ,
+
+(3)
+
+where 𝑅𝑒𝑡𝑖,𝑡 is the return for stock 𝑖 in time 𝑡, 𝑀𝐴𝑋𝑖,𝑡−2 denotes the maximum daily return variable for stock 𝑖 in time 𝑡 − 2, and
+𝐶𝑂𝑁𝑇 𝑅𝑂𝐿𝑆 is a vector of firm characteristics variables. We include the following characteristics in our regressions: momentum
+from month 𝑡 − 2 to 𝑡 − 12 (MOM), the CAPM beta (BETA), the natural logarithm of the market capitalization of a firm (SIZE),
+book-to-market ratio (BM), idiosyncratic volatility (IVOL), total volatility (TVOL), and Amihud (2002) illiquidity measure (ILLIQ).
+Please note that we follow Scholes and Williams (1977) and Dimson (1979) and use the lag and lead of as well as the returns on
+current market portfolio when estimating the CAPM beta. We run the Fama–MacBeth cross-sectional regressions with both monthly
+and weekly returns. To ensure the robustness of our findings, we also report results based on three alternative specifications of MAX:
+the maximum daily return over the past 1 month, 1 week, and 26 weeks.
+The results from Table 13 can be summarized as follows. First and foremost, consistent with our baseline results based on
+portfolio analysis, we find that the interaction terms between MAX and REV (the lagged return from 𝑡 − 1) are significantly negative
+in all cases. This result verifies that the short-term reversal effect is stronger when MAX is high, and vice versa, and further confirms
+19
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+our main hypothesis that lottery demand induced overreaction plays a pivotal role in driving short-term return reversals. Second,
+the coefficients on both MAX and lagged return from 𝑡 − 1 are significantly negative. This result confirms that unconditionally both
+MAX and lagged returns are associated with lower returns. Third, we report that our above findings are remarkably consistent across
+all model specifications, and judging by the 𝑡-statistics the results from weekly returns are even more significant than those from
+monthly returns. Taken together, we conclude that the results from the Fama–MacBeth cross-sectional regressions are consistent
+with those from the portfolio analysis.
+7. Conclusion
+In this article, we examine the interplay between investors’ preferences for lottery-like stocks and short-term reversals in stock
+returns, utilizing the MAX variable from Bali et al. (2011) as a proxy for investors’ preference for lottery-like payoffs. We present
+several significant findings.
+First, we confirm that the MAX anomaly identified by Bali et al. (2011) also manifests in weekly U.S. stock returns. Notably, the
+low average returns experienced by high-MAX stocks persist for at least two weeks.
+Second, while existing literature indicates that unconditionally lottery-like stocks yield negative returns, we provide strong
+evidence that, depending on their classification as past short-term winners or losers, these stocks can achieve either positive or
+negative average returns. Specifically, we demonstrate that high-MAX past 1-week losers can earn outsized positive mean returns,
+while high-MAX past short-term winners may experience negative mean returns compared to their low-MAX counterparts. This
+finding is robust across various conditions; it is particularly pronounced among small and illiquid firms, yet remains valid even
+after controlling for market microstructure biases.
+Third, by analyzing the difference in mean returns between high-MAX past short-term losers and winners, we find that a
+short-term reversal strategy can generate significantly higher expected returns among high-MAX stocks. Furthermore, the average
+returns of this strategy decline consistently as we move from high-MAX to low-MAX stocks. This establishes that investors’ demand
+for lottery-like stocks significantly influences the performance of short-term reversal strategies. Importantly, our findings remain
+consistent even after a comprehensive series of robustness checks, including controls for reference-dependent preferences, investor
+sentiment, and seasonality. We also observe that MAX-enhanced reversal portfolios perform well among stocks with high retail order
+imbalance.
+We believe that our findings align with and complement the theoretical insights of Subrahmanyam (1991) , who posits that when
+market makers are risk-averse, an increase in the volatility of uninformed liquidity trades can lead to reduced price efficiency.
+Consistent with this framework, our results indicate that the pent-up demand from lottery-seeking investors can intensify their
+overreaction to news about lottery-like stocks, prompting market makers to become more cautious, which in turn results in higher
+abnormal reversal profits.
+CRediT authorship contribution statement
+Chen Chen: Writing – review & editing, Writing – original draft, Visualization, Validation, Supervision, Software, Resources,
+Project administration, Methodology, Investigation, Funding acquisition, Formal analysis, Data curation, Conceptualization. Andrew
+Cohen: Writing – review & editing, Writing – original draft, Visualization, Validation, Supervision, Software, Resources, Project
+administration, Methodology, Investigation, Funding acquisition, Formal analysis, Data curation, Conceptualization. Qiqi Liang:
+Writing – review & editing, Writing – original draft, Visualization, Validation, Supervision, Software, Resources, Project administration, Methodology, Investigation, Funding acquisition, Formal analysis, Data curation, Conceptualization. Licheng Sun: Writing
+– review & editing, Writing – original draft, Visualization, Validation, Supervision, Software, Resources, Project administration,
+Methodology, Investigation, Funding acquisition, Formal analysis, Data curation, Conceptualization.
+Appendix A. Supplementary data
+Supplementary material related to this article can be found online at https://doi.org/10.1016/j.jempfin.2025.101608.
+References
+Amihud, Y., 2002. Illiquidity and stock returns: cross-section and time-series effects. J. Financ. Mark. 5 (1), 31–56.
+An, L., Wang, H., Wang, J., Yu, J., 2020. Lottery-related anomalies: the role of reference-dependent preferences. Manag. Sci. 66 (1), 473–501.
+Asparouhova, E., Bessembinder, H., Kalcheva, I., 2010. Liquidity biases in asset pricing tests. J. Financ. Econ. 96 (2), 215–237.
+Avramov, D., Chordia, T., Goyal, A., 2006. Liquidity and autocorrelations in individual stock returns. J. Financ. 61 (5), 2365–2394.
+Baker, M., Wurgler, J., 2006. Investor sentiment and the cross-section of stock returns. J. Financ. 61 (4), 1645–1680.
+Bali, T.G., Cakici, N., Whitelaw, R.F., 2011. Maxing out: Stocks as lotteries and the cross-section of expected returns. J. Financ. Econ. 99 (2), 427–446.
+Barber, B.M., Huang, X., Odean, T., Schwarz, C., 2022. Attention induced trading and returns: Evidence from Robinhood users. J. Financ. 77 (6), 3141–3190.
+Barber, B.M., Odean, T., 2000. Trading is hazardous to your wealth: The common stock investment performance of individual investors. J. Financ. 55 (2),
+773–806.
+Barber, B.M., Odean, T., 2001. Boys will be boys: Gender, overconfidence, and common stock investment. Q. J. Econ. 116 (1), 261–292.
+Barberis, N., Huang, M., 2008. Stocks as lotteries: The implications of probability weighting for security prices. Am. Econ. Rev. 98 (5), 2066–2100.
+Blitz, D., Huij, J., Lansdorp, S., Verbeek, M., 2013. Short-term residual reversal. J. Financ. Mark. 16 (3), 477–504.
+Blume, M.E., Stambaugh, R.F., 1983. Biases in computed returns: An application to the size effect. J. Financ. Econ. 12 (3), 387–404.
+Boehmer, E., Jones, C.M., Zhang, X., Zhang, X., 2021. Tracking retail investor activity. J. Financ. 76 (5), 2249–2305.
+20
+
+Journal of Empirical Finance 82 (2025) 101608
+
+C. Chen et al.
+
+Bordalo, P., Gennaioli, N., Shleifer, A., 2013. Salience and asset prices. Am. Econ. Rev. 103 (3), 623–628.
+Boyer, B., Mitton, T., Vorkink, K., 2010. Expected idiosyncratic skewness. Rev. Financ. Stud. 23 (1), 169–202.
+Byun, S.-J., Kim, D.-H., 2016. Gambling preference and individual equity option returns. J. Financ. Econ. 122 (1), 155–174.
+Campbell, J.Y., Grossman, S.J., Wang, J., 1993. Trading volume and serial correlation in stock returns. Q. J. Econ. 108 (4), 905–939.
+Carhart, M.M., 1997. On persistence in mutual fund performance. J. Financ. 52 (1), 57–82.
+Cheng, S., Hameed, A., Subrahmanyam, A., Titman, S., 2017. Short-term reversals: The effects of past returns and institutional exits. J. Financ. Quant. Anal. 52
+(1), 143–173.
+Chordia, T., Subrahmanyam, A., Tong, Q., 2014. Have capital market anomalies attenuated in the recent era of high liquidity and trading activity? J. Account.
+Econ. 58 (1), 41–58.
+Conrad, J., Dittmar, R.F., Ghysels, E., 2013. Ex ante skewness and expected stock returns. J. Financ. 68 (1), 85–124.
+Conrad, J., Kapadia, N., Xing, Y., 2014. Death and jackpot: Why do individual investors hold overpriced stocks? J. Financ. Econ. 113 (3), 455–475.
+Cooper, M., 1999. Filter rules based on price and volume in individual security overreaction. Rev. Financ. Stud. 12 (4), 901–935.
+Corwin, S.A., Schultz, P., 2012. A simple way to estimate bid-ask spreads from daily high and low prices. J. Financ. 67 (2), 719–760.
+Da, Z., Liu, Q., Schaumburg, E., 2014. A closer look at the short-term return reversal. Manag. Sci. 60 (3), 658–674.
+Dimson, E., 1979. Risk measurement when shares are subject to infrequent trading. J. Financ. Econ. 7 (2), 197–226.
+Dorn, A.J., Dorn, D., Sengmueller, P., 2015. Trading as gambling. Manag. Sci. 61 (10), 2376–2393.
+Eraker, B., Ready, M., 2015. Do investors overpay for stocks with lottery-like payoffs? An examination of the returns of OTC stocks. J. Financ. Econ. 115 (3),
+486–504.
+Fama, E.F., French, K.R., 1992. The cross-section of expected stock returns. J. Financ. 47 (2), 427–465.
+Fama, E.F., French, K.R., 2015. A five-factor asset pricing model. J. Financ. Econ. 116 (1), 1–22.
+Fama, E.F., MacBeth, J.D., 1973. Risk, return, and equilibrium: Empirical tests. J. Political Econ. 81 (3), 607–636.
+Gao, X., Lin, T.-C., 2015. Do individual investors treat trading as a fun and exciting gambling activity? Evidence from repeated natural experiments. Rev. Financ.
+Stud. 28 (7), 2128–2166.
+Green, T.C., Hwang, B.-H., 2012. Initial public offerings as lotteries: Skewness preference and first-day returns. Manag. Sci. 58 (2), 432–444.
+Grinblatt, M., Han, B., 2005. Prospect theory, mental accounting, and momentum. J. Financ. Econ. 78 (2), 311–339.
+Grinblatt, M., Keloharju, M., 2009. Sensation seeking, overconfidence, and trading activity. J. Financ. 64 (2), 549–578.
+Grossman, S.J., Miller, M.H., 1988. Liquidity and market structure. J. Financ. 43 (3), 617–633.
+Hameed, A., Mian, G.M., 2015. Industries and stock return reversals. J. Financ. Quant. Anal. 50 (1–2), 89–117.
+Hou, K., Xue, C., Zhang, L., 2015. Digesting anomalies: An investment approach. Rev. Financ. Stud. 28 (3), 650–705.
+Jegadeesh, N., 1990. Evidence of predictable behavior of security returns. J. Financ. 45 (3), 881–898.
+Kumar, A., 2009. Who gambles in the stock market? J. Financ. 64 (4), 1889–1933.
+Kyle, A.S., 1985. Continuous auctions and insider trading. Econometrica 1315–1335.
+Lehmann, B.N., 1990. Fads, martingales, and market efficiency. Q. J. Econ. 105 (1), 1–28.
+Liu, B., Wang, H., Yu, J., Zhao, S., 2020. Time-varying demand for lottery: Speculation ahead of earnings announcements. J. Financ. Econ. 138 (3), 789–817.
+Mitton, T., Vorkink, K., 2007. Equilibrium underdiversification and the preference for skewness. Rev. Financ. Stud. 20 (4), 1255–1288.
+Nagel, S., 2012. Evaporating liquidity. Rev. Financ. Stud. 25 (7), 2005–2039.
+Scholes, M., Williams, J., 1977. Estimating betas from nonsynchronous data. J. Financ. Econ. 5 (3), 309–327.
+Stambaugh, R.F., Yu, J., Yuan, Y., 2012. The short of it: Investor sentiment and anomalies. J. Financ. Econ. 104 (2), 288–302.
+Stivers, C.T., Sun, L., 2013. Re-examining reversals in monthly stock returns: Post-discovery, size-based, and time-variation evidence. Working Paper, University
+of Louisville.
+Subrahmanyam, A., 1991. Risk aversion, market liquidity, and price efficiency. Rev. Financ. Stud. 4 (3), 417–441.
+
+21
+
+
