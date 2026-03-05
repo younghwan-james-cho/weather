@@ -14,16 +14,18 @@ build/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Data files (large)
+# Data files (LARGE)
 *.parquet
 *.sas7bdat
 *.dta
+*.csv
 *.csv.gz
-data/raw/*.sas7bdat
-data/processed/*.parquet
-
-# Keep small reference data
-!reference/*.dta
+data/raw/
+data/processed/
+data/temp/
+data/temp2/
+!reference/FM_sample.dta
+!reference/FM_sample2.dta
 
 # OS
 .DS_Store
